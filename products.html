@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Kivasa Globaltech Pvt Ltd - Jaquar Lighting Catalog</title>
+    <meta name="description" content="Browse our comprehensive catalog of Jaquar lighting products - Street Lights, Flood Lights, Panel Lights, Bay Lights, and more.">
+    <link rel="icon" type="image/png" href="Resources/Kivasa Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="Resources/Kivasa Logo.png" alt="Kivasa Globaltech">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="products.html" class="nav-link active">Products</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="contact.html" class="nav-link btn-cta-nav">Get a Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <img src="Resources/Stock Images for Background/thumbs_CHK-central-boathouse-exterior-architecture-glass-lighting-accents-1.770x0_q95.jpg" alt="Products">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="products-header-flex">
+                <div>
+                    <span class="section-tag">Product Catalog</span>
+                    <h1>Jaquar Lighting Products</h1>
+                    <p>Premium lighting solutions for every infrastructure need. Browse our complete catalog.</p>
+                </div>
+                <div class="brand-badge">
+                    <img src="Resources/Stock Images for Background/images.jpg" alt="Jaquar" class="brand-badge-logo">
+                    <span>Authorized Partner</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS LISTING -->
+    <section class="section products-section">
+        <div class="container">
+            <!-- Category Filters -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="street-light">Street Lights</button>
+                <button class="filter-btn" data-filter="flood-light">Flood Lights</button>
+                <button class="filter-btn" data-filter="panel-light">Panel Lights</button>
+                <button class="filter-btn" data-filter="bay-light">Bay Lights</button>
+                <button class="filter-btn" data-filter="downlight">Downlights</button>
+                <button class="filter-btn" data-filter="facade-light">Facade Lights</button>
+                <button class="filter-btn" data-filter="bollard">Bollard Lights</button>
+                <button class="filter-btn" data-filter="track-light">Track Lights</button>
+            </div>
+
+            <!-- Search -->
+            <div class="product-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="productSearch" placeholder="Search products by name, category, or specification...">
+            </div>
+
+            <!-- Product Grid -->
+            <div class="products-grid" id="productsGrid">
+
+                <!-- STREET LIGHTS -->
+                <div class="product-card" data-category="street-light" data-name="Jaquar Prima Street Light 50W" data-specs="50W LED IP66 150lm/W">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-road"></i></div>
+                        <span class="product-badge">Street Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Prima Street Light 50W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 50W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP66</span>
+                            <span><i class="fas fa-sun"></i> 150 lm/W</span>
+                        </div>
+                        <p class="product-desc">High-efficiency LED street light designed for urban roads and residential areas. Die-cast aluminium housing with superior heat dissipation.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>50W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>150 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>7,500 lm</td></tr>
+                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
+                            <tr><td>IP Rating</td><td>IP66</td></tr>
+                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
+                            <tr><td>Lens</td><td>Tempered Glass</td></tr>
+                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
+                            <tr><td>Mounting</td><td>Pole Mount (60mm)</td></tr>
+                            <tr><td>Warranty</td><td>5 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="street-light" data-name="Jaquar Prima Street Light 100W" data-specs="100W LED IP66 150lm/W">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-road"></i></div>
+                        <span class="product-badge">Street Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Prima Street Light 100W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 100W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP66</span>
+                            <span><i class="fas fa-sun"></i> 150 lm/W</span>
+                        </div>
+                        <p class="product-desc">Heavy-duty street light for highways and arterial roads. Advanced optics with anti-glare design for traffic safety.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>100W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>150 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>15,000 lm</td></tr>
+                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
+                            <tr><td>IP Rating</td><td>IP66</td></tr>
+                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
+                            <tr><td>Lens</td><td>Tempered Glass</td></tr>
+                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
+                            <tr><td>Mounting</td><td>Pole Mount (60mm)</td></tr>
+                            <tr><td>Warranty</td><td>5 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="street-light" data-name="Jaquar Prima Street Light 150W" data-specs="150W LED IP66 150lm/W">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-road"></i></div>
+                        <span class="product-badge">Street Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Prima Street Light 150W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 150W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP66</span>
+                            <span><i class="fas fa-sun"></i> 150 lm/W</span>
+                        </div>
+                        <p class="product-desc">Premium high-output street light for expressways and national highways. Adjustable mounting bracket with multiple beam angles.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>150W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>150 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>22,500 lm</td></tr>
+                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
+                            <tr><td>IP Rating</td><td>IP66</td></tr>
+                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
+                            <tr><td>Lens</td><td>Tempered Glass</td></tr>
+                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
+                            <tr><td>Mounting</td><td>Adjustable Pole Mount</td></tr>
+                            <tr><td>Warranty</td><td>5 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- FLOOD LIGHTS -->
+                <div class="product-card" data-category="flood-light" data-name="Jaquar Blaze LED Flood Light 100W" data-specs="100W LED IP65 130lm/W">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-broadcast-tower"></i></div>
+                        <span class="product-badge">Flood Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Blaze Flood Light 100W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 100W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP65</span>
+                            <span><i class="fas fa-sun"></i> 130 lm/W</span>
+                        </div>
+                        <p class="product-desc">Versatile flood light for facades, sports grounds, and industrial areas. Wide beam angle with uniform light distribution.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>100W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>130 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>13,000 lm</td></tr>
+                            <tr><td>CCT</td><td>6500K (Daylight)</td></tr>
+                            <tr><td>Beam Angle</td><td>120°</td></tr>
+                            <tr><td>IP Rating</td><td>IP65</td></tr>
+                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
+                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
+                            <tr><td>Mounting</td><td>Adjustable Bracket</td></tr>
+                            <tr><td>Warranty</td><td>3 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="flood-light" data-name="Jaquar Blaze LED Flood Light 200W" data-specs="200W LED IP65 130lm/W">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-broadcast-tower"></i></div>
+                        <span class="product-badge">Flood Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Blaze Flood Light 200W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 200W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP65</span>
+                            <span><i class="fas fa-sun"></i> 130 lm/W</span>
+                        </div>
+                        <p class="product-desc">High-power flood light for large areas, stadium perimeters, and industrial yards. Robust construction for extreme conditions.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>200W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>130 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>26,000 lm</td></tr>
+                            <tr><td>CCT</td><td>6500K (Daylight)</td></tr>
+                            <tr><td>Beam Angle</td><td>120°</td></tr>
+                            <tr><td>IP Rating</td><td>IP65</td></tr>
+                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
+                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
+                            <tr><td>Mounting</td><td>Adjustable Bracket</td></tr>
+                            <tr><td>Warranty</td><td>3 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="flood-light" data-name="Jaquar Blaze LED Flood Light 400W" data-specs="400W LED IP66 140lm/W">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-broadcast-tower"></i></div>
+                        <span class="product-badge">Flood Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Blaze Flood Light 400W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 400W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP66</span>
+                            <span><i class="fas fa-sun"></i> 140 lm/W</span>
+                        </div>
+                        <p class="product-desc">Ultra high-output flood light for stadiums, airports, and large infrastructure projects. Modular design with individual LED modules.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>400W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>140 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>56,000 lm</td></tr>
+                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
+                            <tr><td>Beam Angle</td><td>60°/90°/120°</td></tr>
+                            <tr><td>IP Rating</td><td>IP66</td></tr>
+                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
+                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
+                            <tr><td>Mounting</td><td>Heavy-duty Bracket</td></tr>
+                            <tr><td>Warranty</td><td>5 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- PANEL LIGHTS -->
+                <div class="product-card" data-category="panel-light" data-name="Jaquar Stellar Slim Panel 18W" data-specs="18W LED IP40 110lm/W Round/Square">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-th-large"></i></div>
+                        <span class="product-badge">Panel Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Stellar Slim Panel 18W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 18W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP40</span>
+                            <span><i class="fas fa-sun"></i> 110 lm/W</span>
+                        </div>
+                        <p class="product-desc">Ultra-slim surface-mounted panel light for offices, corridors, and commercial spaces. Available in round and square configurations.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>18W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>110 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>1,980 lm</td></tr>
+                            <tr><td>CCT</td><td>4000K (Neutral White)</td></tr>
+                            <tr><td>IP Rating</td><td>IP40</td></tr>
+                            <tr><td>Size</td><td>220mm (Round) / 220x220mm (Square)</td></tr>
+                            <tr><td>Housing</td><td>PPMA + Aluminium</td></tr>
+                            <tr><td>Lifespan</td><td>30,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>220-240V AC</td></tr>
+                            <tr><td>Mounting</td><td>Surface / Recessed</td></tr>
+                            <tr><td>Warranty</td><td>2 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="panel-light" data-name="Jaquar Stellar 2x2 Panel 40W" data-specs="40W LED IP40 120lm/W Backlit">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-th-large"></i></div>
+                        <span class="product-badge">Panel Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Stellar 2x2 Backlit Panel 40W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 40W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP40</span>
+                            <span><i class="fas fa-sun"></i> 120 lm/W</span>
+                        </div>
+                        <p class="product-desc">Premium backlit panel for false-ceiling installations in commercial buildings, offices, and railway stations. Uniform, flicker-free output.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>40W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>120 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>4,800 lm</td></tr>
+                            <tr><td>CCT</td><td>4000K / 6500K</td></tr>
+                            <tr><td>IP Rating</td><td>IP40</td></tr>
+                            <tr><td>Size</td><td>600x600mm</td></tr>
+                            <tr><td>Type</td><td>Backlit Panel</td></tr>
+                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>220-240V AC</td></tr>
+                            <tr><td>Mounting</td><td>Recessed (Grid Ceiling)</td></tr>
+                            <tr><td>Warranty</td><td>3 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- BAY LIGHTS -->
+                <div class="product-card" data-category="bay-light" data-name="Jaquar Forge High Bay 100W" data-specs="100W LED IP65 140lm/W Industrial">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-industry"></i></div>
+                        <span class="product-badge">Bay Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Forge High Bay 100W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 100W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP65</span>
+                            <span><i class="fas fa-sun"></i> 140 lm/W</span>
+                        </div>
+                        <p class="product-desc">Industrial high bay light for warehouses, factories, and production floors. Superior heat management with finned aluminium body.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>100W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>140 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>14,000 lm</td></tr>
+                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
+                            <tr><td>Beam Angle</td><td>90° / 120°</td></tr>
+                            <tr><td>IP Rating</td><td>IP65</td></tr>
+                            <tr><td>Housing</td><td>Finned Die-cast Aluminium</td></tr>
+                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
+                            <tr><td>Mounting Height</td><td>6-10m</td></tr>
+                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
+                            <tr><td>Warranty</td><td>5 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bay-light" data-name="Jaquar Forge High Bay 200W" data-specs="200W LED IP65 140lm/W Industrial">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-industry"></i></div>
+                        <span class="product-badge">Bay Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Forge High Bay 200W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 200W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP65</span>
+                            <span><i class="fas fa-sun"></i> 140 lm/W</span>
+                        </div>
+                        <p class="product-desc">High-output bay light for large warehouses and manufacturing plants. Replaceable LED driver for easy maintenance.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>200W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>140 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>28,000 lm</td></tr>
+                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
+                            <tr><td>Beam Angle</td><td>90° / 120°</td></tr>
+                            <tr><td>IP Rating</td><td>IP65</td></tr>
+                            <tr><td>Housing</td><td>Finned Die-cast Aluminium</td></tr>
+                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
+                            <tr><td>Mounting Height</td><td>8-15m</td></tr>
+                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
+                            <tr><td>Warranty</td><td>5 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- DOWNLIGHTS -->
+                <div class="product-card" data-category="downlight" data-name="Jaquar Neve LED Downlight 15W" data-specs="15W LED IP44 100lm/W Recessed">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-circle"></i></div>
+                        <span class="product-badge">Downlight</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Neve LED Downlight 15W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 15W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP44</span>
+                            <span><i class="fas fa-sun"></i> 100 lm/W</span>
+                        </div>
+                        <p class="product-desc">Elegant recessed downlight for offices, lobbies, and commercial interiors. Anti-glare diffuser for visual comfort.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>15W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>100 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>1,500 lm</td></tr>
+                            <tr><td>CCT</td><td>3000K / 4000K / 6500K</td></tr>
+                            <tr><td>Beam Angle</td><td>90°</td></tr>
+                            <tr><td>IP Rating</td><td>IP44</td></tr>
+                            <tr><td>Cut-out</td><td>150mm</td></tr>
+                            <tr><td>Lifespan</td><td>30,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>220-240V AC</td></tr>
+                            <tr><td>Mounting</td><td>Recessed</td></tr>
+                            <tr><td>Warranty</td><td>2 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="downlight" data-name="Jaquar Neve LED COB Downlight 30W" data-specs="30W COB LED IP44 90lm/W Adjustable">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-circle"></i></div>
+                        <span class="product-badge">Downlight</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Neve COB Downlight 30W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 30W COB</span>
+                            <span><i class="fas fa-shield-alt"></i> IP44</span>
+                            <span><i class="fas fa-sun"></i> 90 lm/W</span>
+                        </div>
+                        <p class="product-desc">Adjustable COB downlight with tiltable head for accent and general lighting. Premium aluminium reflector for sharp beam control.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>30W</td></tr>
+                            <tr><td>LED Type</td><td>COB (Chip on Board)</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>90 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>2,700 lm</td></tr>
+                            <tr><td>CCT</td><td>3000K / 4000K</td></tr>
+                            <tr><td>Beam Angle</td><td>24° / 36° / 60°</td></tr>
+                            <tr><td>IP Rating</td><td>IP44</td></tr>
+                            <tr><td>Cut-out</td><td>175mm</td></tr>
+                            <tr><td>Lifespan</td><td>30,000 hours</td></tr>
+                            <tr><td>Tilt</td><td>30° Adjustable</td></tr>
+                            <tr><td>Warranty</td><td>2 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- FACADE LIGHTS -->
+                <div class="product-card" data-category="facade-light" data-name="Jaquar Aura Wall Washer 36W" data-specs="36W LED IP65 RGB Linear Wall Washer">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-building"></i></div>
+                        <span class="product-badge">Facade Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Aura Wall Washer 36W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 36W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP65</span>
+                            <span><i class="fas fa-palette"></i> RGB</span>
+                        </div>
+                        <p class="product-desc">Linear RGB wall washer for architectural facade lighting. DMX512 compatible with seamless colour transitions.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>36W</td></tr>
+                            <tr><td>LED Type</td><td>SMD RGB</td></tr>
+                            <tr><td>Colour</td><td>RGB (16.7M colours)</td></tr>
+                            <tr><td>Control</td><td>DMX512 / Stand-alone</td></tr>
+                            <tr><td>IP Rating</td><td>IP65</td></tr>
+                            <tr><td>Length</td><td>1000mm</td></tr>
+                            <tr><td>Housing</td><td>Anodized Aluminium</td></tr>
+                            <tr><td>Beam Angle</td><td>30° x 60°</td></tr>
+                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>24V DC</td></tr>
+                            <tr><td>Warranty</td><td>3 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="facade-light" data-name="Jaquar Aura Facade Spot 18W" data-specs="18W LED IP65 Narrow Beam Facade Spot">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-building"></i></div>
+                        <span class="product-badge">Facade Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Aura Facade Spot 18W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 18W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP65</span>
+                            <span><i class="fas fa-sun"></i> Narrow Beam</span>
+                        </div>
+                        <p class="product-desc">Compact facade spotlight for architectural accent lighting. Narrow beam angle for dramatic column and pillar illumination.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>18W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>100 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>1,800 lm</td></tr>
+                            <tr><td>CCT</td><td>3000K (Warm White)</td></tr>
+                            <tr><td>Beam Angle</td><td>8° / 15° / 25°</td></tr>
+                            <tr><td>IP Rating</td><td>IP65</td></tr>
+                            <tr><td>Housing</td><td>Powder-coated Aluminium</td></tr>
+                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
+                            <tr><td>Mounting</td><td>Surface / Bracket</td></tr>
+                            <tr><td>Warranty</td><td>3 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- BOLLARD LIGHTS -->
+                <div class="product-card" data-category="bollard" data-name="Jaquar Terra LED Bollard 12W" data-specs="12W LED IP65 Landscape Bollard">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-chess-rook"></i></div>
+                        <span class="product-badge">Bollard Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Terra LED Bollard 12W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 12W LED</span>
+                            <span><i class="fas fa-shield-alt"></i> IP65</span>
+                            <span><i class="fas fa-sun"></i> 90 lm/W</span>
+                        </div>
+                        <p class="product-desc">Modern bollard light for pathways, gardens, and landscape areas. Corrosion-resistant housing for long-lasting outdoor performance.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>12W</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>90 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>1,080 lm</td></tr>
+                            <tr><td>CCT</td><td>3000K (Warm White)</td></tr>
+                            <tr><td>IP Rating</td><td>IP65</td></tr>
+                            <tr><td>Height</td><td>800mm</td></tr>
+                            <tr><td>Housing</td><td>SS304 + Aluminium</td></tr>
+                            <tr><td>Lifespan</td><td>30,000 hours</td></tr>
+                            <tr><td>Input Voltage</td><td>220-240V AC</td></tr>
+                            <tr><td>Mounting</td><td>Foundation Bolt</td></tr>
+                            <tr><td>Warranty</td><td>3 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TRACK LIGHTS -->
+                <div class="product-card" data-category="track-light" data-name="Jaquar Beam LED Track Light 30W" data-specs="30W COB LED Track Mounted Commercial">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-adjust"></i></div>
+                        <span class="product-badge">Track Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Beam Track Light 30W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 30W COB</span>
+                            <span><i class="fas fa-shield-alt"></i> IP20</span>
+                            <span><i class="fas fa-sun"></i> 85 lm/W</span>
+                        </div>
+                        <p class="product-desc">Professional track-mounted spotlight for retail, galleries, and showrooms. 355° rotation and 90° tilt for precise light direction.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>30W</td></tr>
+                            <tr><td>LED Type</td><td>COB</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>85 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>2,550 lm</td></tr>
+                            <tr><td>CCT</td><td>3000K / 4000K</td></tr>
+                            <tr><td>Beam Angle</td><td>24° / 36°</td></tr>
+                            <tr><td>IP Rating</td><td>IP20</td></tr>
+                            <tr><td>CRI</td><td>>90</td></tr>
+                            <tr><td>Rotation</td><td>355° H / 90° V</td></tr>
+                            <tr><td>Track Type</td><td>3-Circuit</td></tr>
+                            <tr><td>Warranty</td><td>2 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="track-light" data-name="Jaquar Beam LED Track Light 20W" data-specs="20W COB LED Track Mounted Retail">
+                    <div class="product-image">
+                        <div class="product-placeholder"><i class="fas fa-adjust"></i></div>
+                        <span class="product-badge">Track Light</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaquar Beam Track Light 20W</h3>
+                        <div class="product-specs-brief">
+                            <span><i class="fas fa-bolt"></i> 20W COB</span>
+                            <span><i class="fas fa-shield-alt"></i> IP20</span>
+                            <span><i class="fas fa-sun"></i> 85 lm/W</span>
+                        </div>
+                        <p class="product-desc">Compact track light for retail and hospitality environments. High CRI for accurate colour rendering of merchandise.</p>
+                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
+                    </div>
+                    <div class="product-full-specs" style="display:none">
+                        <table>
+                            <tr><td>Wattage</td><td>20W</td></tr>
+                            <tr><td>LED Type</td><td>COB</td></tr>
+                            <tr><td>Luminous Efficacy</td><td>85 lm/W</td></tr>
+                            <tr><td>Total Lumens</td><td>1,700 lm</td></tr>
+                            <tr><td>CCT</td><td>3000K / 4000K</td></tr>
+                            <tr><td>Beam Angle</td><td>15° / 24° / 36°</td></tr>
+                            <tr><td>IP Rating</td><td>IP20</td></tr>
+                            <tr><td>CRI</td><td>>90</td></tr>
+                            <tr><td>Rotation</td><td>355° H / 90° V</td></tr>
+                            <tr><td>Track Type</td><td>3-Circuit</td></tr>
+                            <tr><td>Warranty</td><td>2 Years</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- No Results -->
+            <div class="no-products" id="noProducts" style="display:none">
+                <i class="fas fa-search"></i>
+                <h3>No products found</h3>
+                <p>Try adjusting your search or filter criteria.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT MODAL -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-overlay" onclick="closeProductModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProductModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <div class="product-placeholder modal-placeholder"><i class="fas fa-lightbulb"></i></div>
+                </div>
+                <div class="modal-details">
+                    <span class="product-badge modal-badge" id="modalCategory"></span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDesc"></p>
+                    <h4>Specifications</h4>
+                    <div id="modalSpecs"></div>
+                    <div class="modal-actions">
+                        <a href="contact.html" class="btn btn-primary">Enquire Now <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://wa.me/918200461631" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="section contact-cta">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-content">
+                    <h2>Need a Custom Product Solution?</h2>
+                    <p>Can't find what you're looking for? We source a wide range of lighting products directly from OEMs. Contact us for custom requirements.</p>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn-primary">Send an Enquiry <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://wa.me/918200461631" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="Resources/Kivasa Logo.png" alt="Kivasa Globaltech" class="footer-logo">
+                    <p>Lighting the Backbone of Infrastructure. Premium lighting and electrical solutions for Railways, Commercial, and Industrial sectors.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#lighting">Bulk Lighting Solutions</a></li>
+                        <li><a href="services.html#railway">Railway Projects</a></li>
+                        <li><a href="services.html#electrical">Electrical Utilities</a></li>
+                        <li><a href="services.html#sourcing">Global Sourcing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@kivasaglobaltech.com</li>
+                        <li><i class="fas fa-phone"></i> +91 82004 61631</li>
+                        <li><i class="fas fa-map-marker-alt"></i> India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kivasa Globaltech Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/918200461631" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
