@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kivasa Globaltech - Company Profile & Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .page {
+                page-break-after: always;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+            .no-break {
+                page-break-inside: avoid;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 10px auto;
+            background: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ===== PAGE 1: PREMIUM COVER ===== */
+        .page-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+        }
+
+        .hero-left {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-left::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: rgba(45, 95, 124, 0.3);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .hero-left::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -30%;
+            width: 250px;
+            height: 250px;
+            background: rgba(45, 95, 124, 0.2);
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-badge {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero-tagline {
+            font-size: 12px;
+            background: rgba(255,255,255,0.15);
+            padding: 12px 18px;
+            border-radius: 6px;
+            display: inline-block;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            margin-bottom: 25px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .hero-stat {
+            text-align: center;
+            border-top: 2px solid rgba(255,255,255,0.2);
+            padding-top: 12px;
+        }
+
+        .hero-stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .hero-stat-label {
+            font-size: 10px;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-right {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-overlay-text {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            padding: 18px;
+            border-radius: 8px;
+            color: white;
+            z-index: 10;
+        }
+
+        .hero-overlay-text p {
+            font-size: 12px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* ===== PAGE 2: SERVICES & PORTFOLIO ===== */
+        .page-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f5f9 100%);
+            padding: 25px 30px;
+            border-bottom: 3px solid #2d5f7c;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .header-logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2d5f7c;
+            letter-spacing: 1px;
+        }
+
+        .header-line {
+            font-size: 11px;
+            color: #999;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .section-desc {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .page-body {
+            padding: 25px 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        /* ===== SERVICES ===== */
+        .services-section {
+            margin-bottom: 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f5f9 100%);
+            border: 1px solid #dfe8f0;
+            padding: 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .service-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .service-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #2d5f7c;
+            margin-bottom: 4px;
+        }
+
+        .service-desc {
+            font-size: 10px;
+            color: #666;
+            line-height: 1.3;
+        }
+
+        /* ===== PORTFOLIO GRID ===== */
+        .portfolio-section {
+            margin-bottom: 15px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 6px;
+            overflow: hidden;
+            height: 140px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 12px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-name {
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .portfolio-type {
+            font-size: 10px;
+            opacity: 0.9;
+        }
+
+        /* ===== PAGE 3: CASE STUDIES & CONTACT ===== */
+        .page-case {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .case-header {
+            padding: 25px 30px;
+            border-bottom: 3px solid #2d5f7c;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f5f9 100%);
+        }
+
+        .case-body {
+            padding: 25px 30px;
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            overflow-y: auto;
+        }
+
+        /* ===== CASE STUDY ITEMS ===== */
+        .case-study {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .case-image {
+            width: 100%;
+            height: 120px;
+            border-radius: 6px;
+            object-fit: cover;
+            border: 1px solid #e0e0e0;
+        }
+
+        .case-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #2d5f7c;
+        }
+
+        .case-details {
+            font-size: 10px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .case-tag {
+            display: inline-block;
+            background: #2d5f7c;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 9px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* ===== WHY CHOOSE ===== */
+        .why-choose {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .why-choose-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .why-check {
+            color: #2d5f7c;
+            font-weight: 700;
+            font-size: 14px;
+            min-width: 20px;
+        }
+
+        .why-text {
+            font-size: 10px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-title {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .contact-item {
+            font-size: 11px;
+            line-height: 1.4;
+            opacity: 0.95;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 2px;
+            opacity: 1;
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .no-break {
+            page-break-inside: avoid;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e0e0e0;
+            margin: 12px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: PREMIUM COVER PAGE -->
+    <div class="page page-hero">
+        <div class="hero-left">
+            <div class="hero-content">
+                <div class="logo-badge">⚡</div>
+                <h1 class="hero-title">KIVASA GLOBALTECH</h1>
+                <p class="hero-subtitle">Electrical Infrastructure Solutions</p>
+                <div class="hero-tagline">Reliable • Technical • Progressive</div>
+                <p style="font-size: 12px; margin-bottom: 25px; line-height: 1.5;">
+                    Premium lighting and electrical systems powering India's most critical infrastructure projects—from railways to industrial facilities to commercial complexes.
+                </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">50+</span>
+                        <span class="hero-stat-label">Projects</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">10+</span>
+                        <span class="hero-stat-label">Years</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">100%</span>
+                        <span class="hero-stat-label">Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <img src="Resources/Stock Images for Background/thumbs_CHK-central-boathouse-exterior-architecture-glass-lighting-accents-1.770x0_q95.jpg" alt="Infrastructure Lighting" class="hero-image">
+            <div class="hero-overlay-text">
+                <p><strong>End-to-End Solutions</strong><br>From design to installation to after-sales support, we deliver comprehensive infrastructure solutions with proven excellence.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: SERVICES & PORTFOLIO -->
+    <div class="page page-content">
+        <div class="page-header">
+            <div class="header-top">
+                <div class="header-logo-text">KIVASA GLOBALTECH</div>
+                <div class="header-line">Services & Portfolio</div>
+            </div>
+            <div class="section-title">Services & Project Portfolio</div>
+            <div class="section-desc">Comprehensive infrastructure solutions across Railways, Industrial, Commercial, and Residential sectors</div>
+        </div>
+
+        <div class="page-body">
+            <!-- SERVICES -->
+            <div class="services-section">
+                <div style="margin-bottom: 10px;">
+                    <div style="font-size: 12px; font-weight: 700; color: #2d5f7c; margin-bottom: 3px;">OUR CORE SERVICES</div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🔦</div>
+                        <div class="service-title">Bulk Lighting</div>
+                        <div class="service-desc">Industrial, facade, street, and infrastructure lighting with project-based pricing</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🚆</div>
+                        <div class="service-title">Railway Solutions</div>
+                        <div class="service-desc">Comprehensive lighting for railway infrastructure with reliable execution</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <div class="service-title">Electrical Utilities</div>
+                        <div class="service-desc">Energy-efficient systems reducing operational costs with high reliability</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🌍</div>
+                        <div class="service-title">Global Sourcing</div>
+                        <div class="service-desc">Direct OEM partnerships ensuring authentic sourcing and competitive pricing</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PORTFOLIO -->
+            <div class="portfolio-section">
+                <div style="font-size: 12px; font-weight: 700; color: #2d5f7c; margin-bottom: 8px;">PROJECT PORTFOLIO HIGHLIGHTS</div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="Resources/Mehsana Railway Station completed project.jpeg" alt="Mehsana Railway Station" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-name">Mehsana Railway</div>
+                            <div class="portfolio-type">Complete Station Lighting</div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Resources/Dakor Railway station completed project.jpeg" alt="Dakor Railway Station" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-name">Dakor Railway Station</div>
+                            <div class="portfolio-type">Infrastructure Upgrade</div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Resources/Stock Images for Background/thumbs_59983-exterior-gensler-samsung-1115.770x0_q95 (1).jpg" alt="Commercial Project" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-name">Commercial Complex</div>
+                            <div class="portfolio-type">Facade & Interior Lighting</div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="Resources/Stock Images for Background/0032c151f6f5f7a0a194be33ba44a79b.jpg" alt="Industrial Project" class="portfolio-image">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-name">Industrial Facility</div>
+                            <div class="portfolio-type">High-Bay & Flood Lighting</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: CASE STUDIES & CONTACT -->
+    <div class="page page-case">
+        <div class="case-header">
+            <div class="header-top">
+                <div class="header-logo-text">KIVASA GLOBALTECH</div>
+                <div class="header-line">Why Choose Us</div>
+            </div>
+            <div class="section-title">Expertise & Partnership</div>
+            <div class="section-desc">Proven track record delivering excellence across India's critical infrastructure</div>
+        </div>
+
+        <div class="case-body">
+            <div class="case-study">
+                <div class="case-title">SHYAMAKHALI RAILWAY STATION</div>
+                <img src="Resources/Shyamakhali Railway Station completed project.jpeg" alt="Shyamakhali Railway Station" class="case-image">
+                <div class="case-details">
+                    <strong>Project Scope:</strong><br>
+                    Complete lighting infrastructure upgrade for railway station premises including platform, junction, and administrative areas.
+                </div>
+                <span class="case-tag">Railways • West Bengal</span>
+            </div>
+
+            <div class="case-study">
+                <div class="case-title">KALOL RAILWAY STATION</div>
+                <img src="Resources/Kalol Railway Station completed project.jpeg" alt="Kalol Railway Station" class="case-image">
+                <div class="case-details">
+                    <strong>Project Scope:</strong><br>
+                    Modern LED lighting solution with energy efficiency improvements and enhanced aesthetics across entire station premises.
+                </div>
+                <span class="case-tag">Railways • Gujarat</span>
+            </div>
+
+            <div style="grid-column: 1 / -1;">
+                <div class="divider"></div>
+
+                <div class="section-title" style="margin-bottom: 12px;">WHY PARTNER WITH KIVASA?</div>
+
+                <div class="why-choose">
+                    <div class="why-choose-left">
+                        <div class="why-item">
+                            <div class="why-check">✓</div>
+                            <div class="why-text"><strong>Proven Experience:</strong> 10+ years in infrastructure with 50+ completed projects</div>
+                        </div>
+                        <div class="why-item">
+                            <div class="why-check">✓</div>
+                            <div class="why-text"><strong>Direct OEM Partnerships:</strong> Authentic Jaquar sourcing for best pricing</div>
+                        </div>
+                        <div class="why-item">
+                            <div class="why-check">✓</div>
+                            <div class="why-text"><strong>End-to-End Solutions:</strong> Design, supply, installation, and support</div>
+                        </div>
+                        <div class="why-item">
+                            <div class="why-check">✓</div>
+                            <div class="why-text"><strong>Quality Guaranteed:</strong> 100% authentic products with full warranty</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-box">
+                        <div class="contact-title">GET IN TOUCH</div>
+                        <div class="contact-item">
+                            <strong>Email</strong>
+                            info@kivasaglobaltech.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Website</strong>
+                            www.kivasaglobaltech.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Headquarters</strong>
+                            India
+                        </div>
+                        <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 10px;">
+                            <strong>Services:</strong><br>
+                            Railway Solutions • Industrial Lighting • Commercial Projects • Global Sourcing
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
