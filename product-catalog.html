@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighting Product Catalog - Kivasa Globaltech</title>
+    <link rel="stylesheet" href="global-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            text-align: center;
+            color: var(--color-white);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .page-header h1 {
+            color: var(--color-white);
+            margin-bottom: var(--spacing-md);
+            font-size: var(--font-size-4xl);
+        }
+
+        .page-header p {
+            color: var(--color-gray-light);
+            font-size: var(--font-size-lg);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Catalog Container */
+        .catalog-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        /* Filter Section */
+        .filter-section {
+            margin-bottom: var(--spacing-2xl);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: var(--spacing-lg);
+            padding: var(--spacing-lg);
+            background-color: var(--color-gray-light);
+            border-radius: var(--radius-lg);
+        }
+
+        .filter-label {
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-navy);
+            font-size: var(--font-size-base);
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--color-gray);
+            background-color: var(--color-white);
+            color: var(--color-navy);
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-sm);
+            transition: all var(--transition-fast);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--color-gold);
+            color: var(--color-gold);
+        }
+
+        .filter-btn.active {
+            background-color: var(--color-gold);
+            color: var(--color-navy);
+            border-color: var(--color-gold);
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        /* Product Card */
+        .product-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-gray-light);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-base);
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--color-gold);
+        }
+
+        .product-card.hidden {
+            display: none;
+        }
+
+        /* Product Image Area */
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--color-navy-light) 0%, var(--color-navy) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(197, 160, 89, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .product-icon {
+            font-size: 60px;
+            color: var(--color-gold);
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        /* Category Badge */
+        .category-badge {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            background-color: var(--color-gold);
+            color: var(--color-navy);
+            padding: 6px 12px;
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-semibold);
+            z-index: 2;
+        }
+
+        /* Product Content */
+        .product-content {
+            padding: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-name {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-navy);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.4;
+        }
+
+        /* Specifications Table */
+        .product-specs {
+            margin-bottom: var(--spacing-lg);
+            flex-grow: 1;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: var(--font-size-sm);
+        }
+
+        .spec-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--color-gray-light);
+        }
+
+        .spec-label {
+            font-weight: var(--font-weight-medium);
+            color: var(--color-gray-dark);
+            width: 50%;
+        }
+
+        .spec-value {
+            color: var(--color-navy);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        /* Enquire Button */
+        .enquire-btn {
+            padding: 12px 24px;
+            background-color: var(--color-gold);
+            color: var(--color-navy);
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: var(--font-weight-semibold);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            width: 100%;
+            text-decoration: none;
+            font-size: var(--font-size-base);
+        }
+
+        .enquire-btn:hover {
+            background-color: var(--color-gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+        }
+
+        .enquire-btn:active {
+            transform: translateY(0);
+        }
+
+        /* No Results Message */
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: var(--spacing-3xl) var(--spacing-lg);
+            color: var(--color-gray-dark);
+        }
+
+        .no-results i {
+            font-size: 48px;
+            color: var(--color-gray);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .no-results h3 {
+            color: var(--color-gray-dark);
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Product Count */
+        .product-count {
+            font-size: var(--font-size-sm);
+            color: var(--color-gray-dark);
+            font-weight: var(--font-weight-medium);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+            color: var(--color-white);
+            padding: var(--spacing-2xl) var(--spacing-lg);
+            text-align: center;
+            border-radius: var(--radius-lg);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .cta-section h3 {
+            color: var(--color-white);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cta-section p {
+            color: var(--color-gray-light);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background-color: var(--color-gold);
+            color: var(--color-navy);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: var(--font-weight-semibold);
+            transition: all var(--transition-fast);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--color-gold-light);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-header {
+                padding: var(--spacing-2xl) var(--spacing-md);
+            }
+
+            .page-header h1 {
+                font-size: var(--font-size-3xl);
+            }
+
+            .filter-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .filter-buttons {
+                width: 100%;
+                gap: var(--spacing-xs);
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: var(--spacing-md);
+            }
+
+            .catalog-container {
+                padding: 0 var(--spacing-md);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header {
+                padding: var(--spacing-lg) var(--spacing-md);
+                margin-bottom: var(--spacing-lg);
+            }
+
+            .page-header h1 {
+                font-size: var(--font-size-2xl);
+            }
+
+            .page-header p {
+                font-size: var(--font-size-sm);
+            }
+
+            .filter-section {
+                padding: var(--spacing-md);
+                gap: var(--spacing-md);
+            }
+
+            .filter-buttons {
+                gap: var(--spacing-xs);
+                width: 100%;
+            }
+
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: var(--font-size-xs);
+                flex: 1;
+                min-width: 80px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image {
+                height: 150px;
+            }
+
+            .product-icon {
+                font-size: 40px;
+            }
+
+            .product-content {
+                padding: var(--spacing-md);
+            }
+
+            .product-name {
+                font-size: var(--font-size-base);
+                margin-bottom: var(--spacing-sm);
+            }
+
+            .spec-table {
+                font-size: var(--font-size-xs);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Lighting Product Catalog</h1>
+        <p>Premium infrastructure lighting solutions for railways, facades, and industrial applications</p>
+    </header>
+
+    <!-- Catalog Container -->
+    <div class="catalog-container">
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <span class="filter-label">Filter by Category:</span>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="flood-light">Flood Light</button>
+                <button class="filter-btn" data-filter="street-light">Street Light</button>
+                <button class="filter-btn" data-filter="wall-washer">Wall Washer</button>
+                <button class="filter-btn" data-filter="downlight">Downlight</button>
+                <button class="filter-btn" data-filter="bay-light">Bay Light</button>
+                <button class="filter-btn" data-filter="bollard">Bollard</button>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="productGrid">
+            <!-- Product Card 1 -->
+            <div class="product-card" data-category="flood-light">
+                <div class="product-image">
+                    <span class="category-badge">Flood Light</span>
+                    <i class="fas fa-lightbulb product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Apex Flood Pro 500W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP65</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">500W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">50,000 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card" data-category="street-light">
+                <div class="product-image">
+                    <span class="category-badge">Street Light</span>
+                    <i class="fas fa-road product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Urban LED Street 100W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP66</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">100W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">12,000 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card" data-category="wall-washer">
+                <div class="product-image">
+                    <span class="category-badge">Wall Washer</span>
+                    <i class="fas fa-shapes product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Elegance Wall Wash 36W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP67</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">36W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">4,500 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card" data-category="downlight">
+                <div class="product-image">
+                    <span class="category-badge">Downlight</span>
+                    <i class="fas fa-arrow-down product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Precision Down 20W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP54</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">20W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">2,200 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card" data-category="bay-light">
+                <div class="product-image">
+                    <span class="category-badge">Bay Light</span>
+                    <i class="fas fa-warehouse product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Industrial Bay 200W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP65</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">200W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">25,000 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card" data-category="bollard">
+                <div class="product-image">
+                    <span class="category-badge">Bollard</span>
+                    <i class="fas fa-minus product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Security Bollard 12W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP67</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">12W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">1,200 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div class="product-card" data-category="flood-light">
+                <div class="product-image">
+                    <span class="category-badge">Flood Light</span>
+                    <i class="fas fa-lightbulb product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Stadium Flood 1000W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP65</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">1000W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">100,000 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div class="product-card" data-category="wall-washer">
+                <div class="product-image">
+                    <span class="category-badge">Wall Washer</span>
+                    <i class="fas fa-shapes product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Architectural Wash 72W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP67</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">72W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">9,000 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 9 -->
+            <div class="product-card" data-category="street-light">
+                <div class="product-image">
+                    <span class="category-badge">Street Light</span>
+                    <i class="fas fa-road product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Smart City Light 150W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP66</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">150W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">18,000 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 10 -->
+            <div class="product-card" data-category="downlight">
+                <div class="product-image">
+                    <span class="category-badge">Downlight</span>
+                    <i class="fas fa-arrow-down product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Compact Down 10W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP54</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">10W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">1,100 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 11 -->
+            <div class="product-card" data-category="bay-light">
+                <div class="product-image">
+                    <span class="category-badge">Bay Light</span>
+                    <i class="fas fa-warehouse product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Heavy Duty Bay 300W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP65</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">300W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">37,500 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 12 -->
+            <div class="product-card" data-category="bollard">
+                <div class="product-image">
+                    <span class="category-badge">Bollard</span>
+                    <i class="fas fa-minus product-icon"></i>
+                </div>
+                <div class="product-content">
+                    <h3 class="product-name">Premium Bollard 24W</h3>
+                    <div class="product-specs">
+                        <table class="spec-table">
+                            <tr>
+                                <td class="spec-label">IP Rating</td>
+                                <td class="spec-value">IP67</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Wattage</td>
+                                <td class="spec-value">24W</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">Lumens</td>
+                                <td class="spec-value">2,400 lm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="enquire-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enquire Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>Didn't Find What You're Looking For?</h3>
+            <p>Our expert team can help you find the perfect lighting solution for your specific requirements.</p>
+            <a href="#contact" class="cta-btn">Contact Our Specialists</a>
+        </div>
+    </div>
+
+    <!-- JavaScript for Filtering -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const selectedCategory = this.getAttribute('data-filter');
+
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter products
+                    filterProducts(selectedCategory);
+                });
+            });
+
+            function filterProducts(category) {
+                let visibleCount = 0;
+
+                productCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+
+                    if (category === 'all' || cardCategory === category) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                // Show/hide no results message
+                const grid = document.getElementById('productGrid');
+                let noResultsDiv = document.getElementById('noResults');
+
+                if (visibleCount === 0) {
+                    if (!noResultsDiv) {
+                        noResultsDiv = document.createElement('div');
+                        noResultsDiv.id = 'noResults';
+                        noResultsDiv.className = 'no-results';
+                        noResultsDiv.innerHTML = `
+                            <i class="fas fa-search"></i>
+                            <h3>No Products Found</h3>
+                            <p>Try selecting a different category or contact us for custom solutions.</p>
+                        `;
+                        grid.appendChild(noResultsDiv);
+                    }
+                } else {
+                    if (noResultsDiv) {
+                        noResultsDiv.remove();
+                    }
+                }
+
+                // Optional: Smooth scroll to products
+                grid.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            // Enquire button functionality
+            const enquireButtons = document.querySelectorAll('.enquire-btn');
+            enquireButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productName = this.closest('.product-card').querySelector('.product-name').textContent;
+                    alert(`Thank you for your interest in ${productName}!\n\nOur team will contact you shortly with more information.`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
