@@ -9,6 +9,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Premium Projects grid + filters (self-contained) */
+    .projects-controls{display:flex;justify-content:flex-end;margin-bottom:1.5rem}
+    .projects-filter-toggles{display:inline-flex;gap:.75rem}
+    .filter-toggle{padding:.6rem 1.1rem;border-radius:999px;background:transparent;border:1px solid rgba(10,12,16,0.06);color:var(--color-navy,#0a0c10);font-weight:600;cursor:pointer;transition:all 220ms ease}
+    .filter-toggle.active{background:linear-gradient(90deg, rgba(197,160,89,0.12), rgba(197,160,89,0.06));border-color:rgba(197,160,89,0.25);box-shadow:0 8px 24px rgba(197,160,89,0.06);transform:translateY(-2px)}
+    .filter-toggle:focus{outline:none;box-shadow:0 0 0 6px rgba(197,160,89,0.06)}
+
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    @media(max-width:900px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.projects-grid{grid-template-columns:1fr}}
+
+    .project-card{background:var(--color-white,#fff);border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(3,6,12,0.06);transform-origin:center;transition:transform .32s ease,box-shadow .32s ease,opacity .32s ease;position:relative;opacity:0;transform:translateY(10px) scale(.995)}
+    .project-card.show{opacity:1;transform:translateY(0) scale(1)}
+
+    .project-image{position:relative;aspect-ratio:16/9;overflow:hidden;background:#111}
+    .project-image img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .project-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.25rem;background:linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.72) 100%);color:#fff;opacity:0;transform:translateY(8px);transition:opacity .28s ease,transform .28s ease}
+    .project-card:hover .project-overlay{opacity:1;transform:translateY(0)}
+
+    .project-content{padding:1rem 1.25rem}
+    .project-title{font-size:1.05rem;margin:0 0 .35rem 0;color:var(--color-navy,#0a0c10)}
+    .project-meta{display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-top:.75rem;color:var(--color-gray,#9ca3af);font-size:.95rem}
+    .category-tag{background:rgba(0,0,0,0.22);color:#fff;padding:.25rem .6rem;border-radius:999px;font-weight:600;font-size:.85rem;display:inline-block;margin-bottom:.5rem}
+
+    .project-card:hover{transform:scale(1.02);box-shadow:0 16px 40px rgba(3,6,12,0.12)}
+    .project-description{font-size:.95rem;color:rgba(255,255,255,0.92);margin:0 0 .5rem 0}
+    .enquire-btn{display:inline-block;padding:.5rem .85rem;border-radius:999px;background:linear-gradient(90deg,#c5a059,#d4b073);color:#0a0c10;font-weight:700;text-decoration:none;margin-top:.5rem}
+    </style>
 </head>
 <body>
 
@@ -46,119 +76,18 @@
         </div>
     </section>
 
-    <!-- FILTER -->
+    <!-- Projects (data-driven) -->
     <section class="section projects-page">
         <div class="container">
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="railways">Railways</button>
-                <button class="filter-btn" data-filter="industrial">Industrial</button>
-                <button class="filter-btn" data-filter="facade">Facade</button>
-                <button class="filter-btn" data-filter="commercial">Commercial</button>
+            <div class="projects-controls">
+                <div class="projects-filter-toggles" role="tablist" aria-label="Filter projects">
+                    <button class="filter-toggle" data-filter="Ongoing">Ongoing</button>
+                    <button class="filter-toggle" data-filter="Completed">Completed</button>
+                </div>
             </div>
 
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-grid-card" data-category="railways">
-                    <div class="project-grid-image">
-                        <img src="Resources/Stock Images for Background/Streetlight stock image.png" alt="Mehsana Railway Station">
-                        <div class="project-overlay-full">
-                            <span class="project-category-tag">Railways</span>
-                            <h3>Mehsana Railway Station</h3>
-                            <p>Complete lighting infrastructure upgrade with improved visibility and aesthetics across the station premises.</p>
-                            <div class="project-details-list">
-                                <span><i class="fas fa-map-marker-alt"></i> Mehsana, Gujarat</span>
-                                <span><i class="fas fa-lightbulb"></i> LED Lighting</span>
-                            </div>
-                            <a href="contact.html" class="btn btn-primary btn-sm">Enquire About Similar Project</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-grid-card" data-category="industrial">
-                    <div class="project-grid-image">
-                        <img src="Resources/Stock Images for Background/Industrial Lighting stock image.png" alt="Industrial Complex">
-                        <div class="project-overlay-full">
-                            <span class="project-category-tag">Industrial</span>
-                            <h3>Industrial Complex Lighting</h3>
-                            <p>High-bay and flood lighting installation for a large-scale industrial complex, optimized for energy efficiency and worker safety.</p>
-                            <div class="project-details-list">
-                                <span><i class="fas fa-map-marker-alt"></i> Gujarat</span>
-                                <span><i class="fas fa-lightbulb"></i> High Bay + Flood</span>
-                            </div>
-                            <a href="contact.html" class="btn btn-primary btn-sm">Enquire About Similar Project</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-grid-card" data-category="facade">
-                    <div class="project-grid-image">
-                        <img src="Resources/Stock Images for Background/facade lighting stock image.png" alt="Facade Lighting">
-                        <div class="project-overlay-full">
-                            <span class="project-category-tag">Facade</span>
-                            <h3>Commercial Facade Lighting</h3>
-                            <p>Architectural facade lighting system designed to enhance the visual identity of a premium commercial property.</p>
-                            <div class="project-details-list">
-                                <span><i class="fas fa-map-marker-alt"></i> India</span>
-                                <span><i class="fas fa-lightbulb"></i> Facade LED</span>
-                            </div>
-                            <a href="contact.html" class="btn btn-primary btn-sm">Enquire About Similar Project</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-grid-card" data-category="commercial">
-                    <div class="project-grid-image">
-                        <img src="Resources/Stock Images for Background/Office lighting.png" alt="Commercial Project">
-                        <div class="project-overlay-full">
-                            <span class="project-category-tag">Commercial</span>
-                            <h3>Residential Tower Lighting</h3>
-                            <p>Full electrical and lighting solution for a premium residential tower, covering common areas, facade, and parking zones.</p>
-                            <div class="project-details-list">
-                                <span><i class="fas fa-map-marker-alt"></i> India</span>
-                                <span><i class="fas fa-lightbulb"></i> Complete Solution</span>
-                            </div>
-                            <a href="contact.html" class="btn btn-primary btn-sm">Enquire About Similar Project</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-grid-card" data-category="railways">
-                    <div class="project-grid-image">
-                        <img src="Resources/Stock Images for Background/Landscape Lighting.png" alt="Railway Platform">
-                        <div class="project-overlay-full">
-                            <span class="project-category-tag">Railways</span>
-                            <h3>Railway Platform Upgrade</h3>
-                            <p>Platform and concourse lighting modernization project with energy-efficient LED solutions and smart controls.</p>
-                            <div class="project-details-list">
-                                <span><i class="fas fa-map-marker-alt"></i> India</span>
-                                <span><i class="fas fa-lightbulb"></i> Platform LED</span>
-                            </div>
-                            <a href="contact.html" class="btn btn-primary btn-sm">Enquire About Similar Project</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-grid-card" data-category="facade">
-                    <div class="project-grid-image">
-                        <img src="Resources/Stock Images for Background/Decorative Lighting stock image.png" alt="Architectural Lighting">
-                        <div class="project-overlay-full">
-                            <span class="project-category-tag">Facade</span>
-                            <h3>Architectural Accent Lighting</h3>
-                            <p>Precision accent and architectural lighting design for a premium commercial building exterior.</p>
-                            <div class="project-details-list">
-                                <span><i class="fas fa-map-marker-alt"></i> India</span>
-                                <span><i class="fas fa-lightbulb"></i> Accent Lighting</span>
-                            </div>
-                            <a href="contact.html" class="btn btn-primary btn-sm">Enquire About Similar Project</a>
-                        </div>
-                    </div>
-                </div>
+            <div id="projectsGrid" class="projects-grid" aria-live="polite">
+                <!-- cards will be rendered here by JavaScript -->
             </div>
         </div>
     </section>
@@ -257,6 +186,90 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="script.js"></script>
+</script>
+        <script src="script.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const projects = [
+                { title: 'Karamsad Railway Station', category: 'Completed', imagePath: 'Resources/Completed projects/Karamsad Railway Station.jpg', description: 'Indoor and Outdoor Commercial Lighting • 2025' },
+                { title: 'Dakor Railway Station', category: 'Completed', imagePath: 'Resources/Completed projects/Dakor Railway station completed project.jpeg', description: 'Indoor and Outdoor Commercial Lighting • 2025' },
+                { title: 'Mehemdavad Railway Station', category: 'Completed', imagePath: 'Resources/Completed projects/Platform Lighting at Dakor Railway Station.jpg', description: 'Indoor and Outdoor Commercial Lighting • 2025' },
+                { title: 'Pratapnagar Railway Station', category: 'Completed', imagePath: 'Resources/Completed projects/Pratapnagar Railway Station.avif', description: 'Indoor and Outdoor Commercial Lighting • 2026' },
+                { title: 'Shyamakhali Railway Station', category: 'Completed', imagePath: 'Resources/Completed projects/Shyamakhali Railway Station completed project.jpeg', description: 'Façade Lighting • 2025' },
+                { title: 'Kalol Railway Station', category: 'Completed', imagePath: 'Resources/Completed projects/Kalol Railway Station completed project.jpeg', description: 'Façade Lighting • 2026' },
+                { title: 'Mehsana Railway Station', category: 'Completed', imagePath: 'Resources/Completed projects/Mehsana Railway Station completed project.jpeg', description: 'Façade Lighting • 2026' },
+                { title: 'Valsad Loco Shed', category: 'Completed', imagePath: 'Resources/Completed projects/Valsad Loco Shed - Gujarat.jpeg', description: 'Pit Lights • Ongoing' },
+                { title: 'Kakaria Railway Colony', category: 'Completed', imagePath: 'Resources/Stock Images for Background/Landscape Lighting stock image.png', description: 'Street Lighting • 2025' },
+                { title: 'Sabarmati Railway Colony', category: 'Completed', imagePath: 'Resources/Stock Images for Background/Landscape Lighting stock image.png', description: 'Street Lighting • 2025' },
+                { title: 'Private Residence designed by Ar. Sanjay Puri', category: 'Completed', imagePath: 'Resources/Completed projects/Premium Residential Site at Navasari.jpeg', description: 'Indoor lights and Switches • Ongoing' },
+                { title: 'Himmatnagar Railway Station', category: 'Ongoing', imagePath: 'Resources/Completed projects/Himmatnagar Railway Station.png', description: 'Façade Lighting • Ongoing' },
+                { title: 'Somnath Railway Station', category: 'Ongoing', imagePath: 'Resources/Completed projects/Under construction.png', description: 'Indoor and Outdoor Commercial Lighting • Ongoing' },
+                { title: 'Bhachau Railway Station', category: 'Ongoing', imagePath: 'Resources/Completed projects/Under construction.png', description: 'Façade Lighting • Ongoing' },
+                { title: 'Patan Railway Station', category: 'Ongoing', imagePath: 'Resources/Completed projects/Under construction.png', description: 'Façade Lighting • Ongoing' },
+                { title: 'Bhildi Railway Station', category: 'Ongoing', imagePath: 'Resources/Completed projects/Under construction.png', description: 'Façade Lighting • Ongoing' },
+                { title: 'Unjha Railway Station', category: 'Ongoing', imagePath: 'Resources/Completed projects/Under construction.png', description: 'Façade Lighting • Ongoing' },
+                { title: 'Sidhpur Railway Station', category: 'Ongoing', imagePath: 'Resources/Completed projects/Under construction.png', description: 'Façade Lighting • Ongoing' },
+                { title: 'Solar Panel Manufacturing Plant, Jemi Solar Navasari', category: 'Ongoing', imagePath: 'Resources/Completed projects/Under construction.png', description: 'Industrial Lights • Ongoing' }
+            ];
+
+            const grid = document.getElementById('projectsGrid');
+            const toggles = document.querySelectorAll('.filter-toggle');
+
+            function createCard(p) {
+                const article = document.createElement('article');
+                article.className = 'project-card';
+                article.setAttribute('data-category', p.category);
+
+                article.innerHTML = `
+                    <div class="project-image">
+                        <img src="${p.imagePath}" alt="${p.title.replace(/"/g, '')}" loading="lazy">
+                        <div class="project-overlay">
+                            <div>
+                                <span class="category-tag">${p.category}</span>
+                                <h3 class="project-title">${p.title}</h3>
+                                <p class="project-description">${p.description}</p>
+                                <a class="enquire-btn" href="contact.html">Enquire</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h4 class="project-title" style="margin:0">${p.title}</h4>
+                        <div class="project-meta">
+                            <span>${p.category}</span>
+                            <a href="contact.html" class="enquire-btn" style="padding:.4rem .7rem;font-size:.9rem">Enquire</a>
+                        </div>
+                    </div>
+                `;
+
+                return article;
+            }
+
+            function renderProjects(filter = null) {
+                grid.innerHTML = '';
+                const filtered = projects.filter(p => !filter || p.category === filter);
+                filtered.forEach(p => {
+                    const card = createCard(p);
+                    grid.appendChild(card);
+                    requestAnimationFrame(() => {
+                        card.classList.add('show');
+                    });
+                });
+            }
+
+            // toggles: exclusive selection, click again to clear
+            toggles.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const isActive = btn.classList.contains('active');
+                    toggles.forEach(b => b.classList.remove('active'));
+                    const filter = isActive ? null : btn.dataset.filter;
+                    if (!isActive) btn.classList.add('active');
+                    renderProjects(filter);
+                });
+            });
+
+            // initial render (show all)
+            renderProjects(null);
+        });
+        </script>
 </body>
 </html>
