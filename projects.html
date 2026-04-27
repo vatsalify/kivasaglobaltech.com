@@ -186,7 +186,6 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-</script>
         <script src="script.js"></script>
         <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -220,26 +219,26 @@
                 article.className = 'project-card';
                 article.setAttribute('data-category', p.category);
 
-                article.innerHTML = `
-                    <div class="project-image">
-                        <img src="${p.imagePath}" alt="${p.title.replace(/"/g, '')}" loading="lazy">
-                        <div class="project-overlay">
-                            <div>
-                                <span class="category-tag">${p.category}</span>
-                                <h3 class="project-title">${p.title}</h3>
-                                <p class="project-description">${p.description}</p>
-                                <a class="enquire-btn" href="contact.html">Enquire</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h4 class="project-title" style="margin:0">${p.title}</h4>
-                        <div class="project-meta">
-                            <span>${p.category}</span>
-                            <a href="contact.html" class="enquire-btn" style="padding:.4rem .7rem;font-size:.9rem">Enquire</a>
-                        </div>
-                    </div>
-                `;
+                // build image element with encoded src to avoid issues with spaces
+                const imgWrap = document.createElement('div');
+                imgWrap.className = 'project-image';
+                const img = document.createElement('img');
+                img.alt = p.title.replace(/"/g, '');
+                img.loading = 'lazy';
+                img.src = encodeURI(p.imagePath || '');
+                imgWrap.appendChild(img);
+
+                const overlay = document.createElement('div');
+                overlay.className = 'project-overlay';
+                overlay.innerHTML = `<div><span class="category-tag">${p.category}</span><h3 class="project-title">${p.title}</h3><p class="project-description">${p.description}</p><a class="enquire-btn" href="contact.html">Enquire</a></div>`;
+                imgWrap.appendChild(overlay);
+
+                const content = document.createElement('div');
+                content.className = 'project-content';
+                content.innerHTML = `<h4 class="project-title" style="margin:0">${p.title}</h4><div class="project-meta"><span>${p.category}</span><a href="contact.html" class="enquire-btn" style="padding:.4rem .7rem;font-size:.9rem">Enquire</a></div>`;
+
+                article.appendChild(imgWrap);
+                article.appendChild(content);
 
                 return article;
             }
