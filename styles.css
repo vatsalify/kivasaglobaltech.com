@@ -116,26 +116,10 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-.logo-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center aligns the tagline under the logo */
-}
-
 .nav-logo img {
-    height: 85px;
-    max-height: 85px;
+    height: 110px;
+    max-height: 110px;
     width: auto;
-}
-
-.logo-tagline {
-    font-size: 10px;
-    font-weight: 600;
-    color: var(--accent-gold);
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    margin-top: 2px;
-    white-space: nowrap;
 }
 
 .nav-menu {
@@ -1613,26 +1597,11 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 40px;
 }
 
-.footer-logo-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 16px;
-}
-
 .footer-logo {
-    height: 85px;
-    max-height: 85px;
+    height: 110px;
+    max-height: 110px;
     width: auto;
-    margin-bottom: 4px;
-}
-
-.footer-tagline {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--accent-gold);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    margin-bottom: 16px;
 }
 
 .footer-about p {
