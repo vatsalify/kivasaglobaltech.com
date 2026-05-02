@@ -154,11 +154,19 @@ document.addEventListener('DOMContentLoaded', function () {
         ];
         
         const randomImage = stockImages[Math.floor(Math.random() * stockImages.length)];
-        // Properly encode the filename for CSS url()
-        const encodedImageName = encodeURIComponent(randomImage).replace(/'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29");
-        const imagePath = `Resources/Stock%20Images%20for%20Background/${encodedImageName}`;
-        
-        heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('${imagePath}')`;
+        // Encode only characters that break CSS url()
+        const safeName = randomImage
+            .replace(/\(/g, '%28')
+            .replace(/\)/g, '%29')
+            .replace(/'/g, '%27')
+            .replace(/ /g, '%20');
+        const imagePath = 'Resources/Stock%20Images%20for%20Background/' + safeName;
+
+        // Overlay at 0.45 so image is clearly visible but text remains readable
+        heroSection.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('" + imagePath + "')";
+        heroSection.style.backgroundSize = 'cover';
+        heroSection.style.backgroundPosition = 'center center';
+        heroSection.style.backgroundRepeat = 'no-repeat';
     }
 
     // ---- Smooth scroll for hash links ----
