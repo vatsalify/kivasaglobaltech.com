@@ -1,29 +1,29 @@
 /* ============================================
    KIVASA GLOBALTECH - MAIN STYLESHEET
-   Dark Premium Industrial Theme
+   Light Premium Professional Theme
    ============================================ */
 
 /* ---- CSS Variables ---- */
 :root {
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #111118;
-    --bg-card: #16161f;
-    --bg-card-hover: #1c1c28;
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0b8;
-    --text-muted: #6b6b80;
-    --accent-gold: #c9a84c;
-    --accent-gold-light: #e0c468;
-    --accent-blue: #3b82f6;
-    --accent-green: #22c55e;
-    --border-color: #2a2a3a;
-    --border-light: #1e1e2e;
-    --gradient-gold: linear-gradient(135deg, #c9a84c 0%, #e0c468 100%);
-    --gradient-dark: linear-gradient(180deg, #0a0a0f 0%, #111118 100%);
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
-    --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
-    --shadow-lg: 0 8px 40px rgba(0,0,0,0.5);
-    --shadow-gold: 0 4px 20px rgba(201,168,76,0.15);
+    --bg-primary: #fcfcfd;
+    --bg-secondary: #f8f9fa;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --accent-gold: #b38e2d;
+    --accent-gold-light: #c9a84c;
+    --accent-blue: #2563eb;
+    --accent-green: #16a34a;
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    --gradient-gold: linear-gradient(135deg, #b38e2d 0%, #c9a84c 100%);
+    --gradient-dark: linear-gradient(180deg, #f8f9fa 0%, #f1f5f9 100%);
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+    --shadow-gold: 0 4px 20px rgba(179,142,45,0.1);
     --radius-sm: 6px;
     --radius-md: 12px;
     --radius-lg: 20px;
@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar.scrolled {
-    background: rgba(10, 10, 15, 0.95);
+    background: rgba(252, 252, 253, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     padding: 10px 0;
@@ -1631,7 +1631,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 40px;
     height: 40px;
     border-radius: var(--radius-sm);
-    background: rgba(255,255,255,0.05);
+    background: var(--bg-card);
     border: 1px solid var(--border-color);
     display: flex;
     align-items: center;
