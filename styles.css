@@ -117,8 +117,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-logo img {
-    height: 110px;
-    max-height: 110px;
+    height: 160px;
+    max-height: 160px;
     width: auto;
 }
 
@@ -1619,8 +1619,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo {
-    height: 110px;
-    max-height: 110px;
+    height: 160px;
+    max-height: 160px;
     width: auto;
     margin-bottom: 16px;
 }
