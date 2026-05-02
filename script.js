@@ -131,6 +131,36 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(el);
     });
 
+    // ---- Random Hero Background ----
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+        const stockImages = [
+            'Decorative Lighting stock image 1.png',
+            'Decorative Lighting stock image.png',
+            'Decorative poles stock image.png',
+            'facade lighting stock image 2.png',
+            'facade lighting stock image.png',
+            'Home Lighting Stock Image (2).png',
+            'Home lighting stock image.png',
+            'Hospitality lighitng stock image.png',
+            'Industrial Lighting stock image.png',
+            'Landscape Lighting stock image.png',
+            'landscpae light stock image.png',
+            'Office lighting stock image.png',
+            'Pendant light stock image.png',
+            'Streetlight stock image.png',
+            'Table lamps decorative stock image.png',
+            'Wall lamps decorative stock image.png'
+        ];
+        
+        const randomImage = stockImages[Math.floor(Math.random() * stockImages.length)];
+        // Properly encode the filename for CSS url()
+        const encodedImageName = encodeURIComponent(randomImage).replace(/'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29");
+        const imagePath = `Resources/Stock%20Images%20for%20Background/${encodedImageName}`;
+        
+        heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('${imagePath}')`;
+    }
+
     // ---- Smooth scroll for hash links ----
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
