@@ -250,12 +250,16 @@ h1, h2, h3, h4, h5, h6 {
 /* ============================================
    HERO SECTION
    ============================================ */
-.hero {
+.hero, .hero-section {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .hero-bg {
@@ -347,8 +351,14 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 .page-header {
     position: relative;
-    padding: 160px 0 80px;
+    min-height: 100vh; /* Changed from padding to 100vh to ensure full height */
+    display: flex;
+    align-items: center;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .page-header-sm {
