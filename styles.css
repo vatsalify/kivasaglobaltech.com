@@ -111,8 +111,14 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
 .nav-logo img {
-    height: 44px;
+    height: 85px;
+    max-height: 85px;
     width: auto;
 }
 
@@ -1592,7 +1598,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo {
-    height: 40px;
+    height: 85px;
+    max-height: 85px;
     width: auto;
     margin-bottom: 16px;
 }
