@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Kivasa Homepage Mockup</title>
+<meta name="description" content="Kivasa Globaltech: facade, platform and depot lighting for Indian Railways stations across Gujarat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+Devanagari:wght@600&family=Noto+Sans+Gujarati:wght@600&display=swap">
+<style>
+:root{
+  color-scheme: dark;
+  --night:#0A101C;
+  --deck:#101929;
+  --deck-2:#172238;
+  --rule:#243452;
+  --mist:#95A3BC;
+  --text:#E7ECF4;
+  --gold:#D9AE4E;
+  --gold-hi:#EDCB7C;
+  --paper:#F2F4F7;
+  --paper-2:#E4E8EF;
+  --ink:#0B1322;
+  --ink-2:#4A5872;
+  --led:#FFB547;
+  --led-dim:#6B4A14;
+  --ok:#5CC592;
+  --board:#05080F;
+  --display:"Archivo", "Arial Narrow", system-ui, sans-serif;
+  --body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --gu:"Noto Sans Gujarati", "Shruti", sans-serif;
+  --hi:"Noto Sans Devanagari", "Mangal", sans-serif;
+  --wrap:1180px;
+  --gutter:clamp(16px, 4vw, 40px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--text);font:400 16px/1.65 var(--body)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-stretch:112%;line-height:1.05;letter-spacing:-.01em;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.lede{color:var(--mist);max-width:60ch;font-size:17px}
+
+/* mockup ribbon */
+.ribbon{background:var(--gold);color:var(--ink);font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-align:center;padding:7px 16px}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(10,16,28,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:34px;height:auto}
+.brand b{display:block;font:800 17px/1 var(--display);font-stretch:118%;letter-spacing:.08em;color:var(--gold-hi)}
+.brand small{display:block;font:500 9.5px/1 var(--mono);letter-spacing:.32em;color:var(--mist);margin-top:4px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{text-decoration:none;font-size:14.5px;color:var(--mist)}
+.nav ul a:hover,.nav ul a[aria-current]{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 15px/1 var(--body);text-decoration:none;padding:14px 20px;border-radius:4px;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-hi)}
+.btn-line{border-color:var(--rule);color:var(--text)}
+.btn-line:hover{border-color:var(--mist)}
+.nav .btn{padding:11px 16px;font-size:14px}
+.menu{display:none;margin-left:auto;background:none;border:1px solid var(--rule);color:var(--text);border-radius:4px;padding:8px 12px;font:500 13px var(--mono)}
+
+/* hero */
+.hero{padding-block:clamp(40px,7vw,88px) clamp(48px,7vw,96px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(28px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(38px,5.2vw,66px);font-weight:800;margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--gold-hi)}
+.hero .lede{margin-top:22px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-fig{position:relative;margin:0}
+.hero-fig img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:6px}
+.hero-fig figcaption{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:12px;font:400 12.5px/1.4 var(--mono);color:var(--mist)}
+
+/* station nameboard — the signature detail */
+.board-sign{display:inline-grid;background:var(--gold);color:var(--ink);border:3px solid var(--ink);outline:2px solid var(--gold);padding:8px 16px 9px;text-align:center;line-height:1.15;border-radius:2px;box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.board-sign .gu{font:600 15px var(--gu)}
+.board-sign .hi{font:600 15px var(--hi)}
+.board-sign .en{font:800 19px var(--display);font-stretch:115%;letter-spacing:.1em}
+.hero-fig .board-sign{position:absolute;left:-18px;bottom:52px}
+
+/* proof strip */
+.proof{border-block:1px solid var(--rule);background:var(--deck)}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.proof div{padding:26px 20px 24px;border-left:1px solid var(--rule)}
+.proof div:first-child{border-left:0;padding-left:0}
+.proof b{display:block;font:600 clamp(28px,3.4vw,40px)/1 var(--mono);color:var(--text);font-variant-numeric:tabular-nums}
+.proof span{display:block;margin-top:10px;font-size:14px;color:var(--mist);line-height:1.4}
+
+/* sections */
+.sec{padding-block:clamp(64px,9vw,112px)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.sec-head h2{font-size:clamp(30px,4vw,48px);font-weight:750;margin-top:14px}
+.sec-head .lede{margin-top:14px}
+
+/* sectors */
+.sectors{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:auto auto;gap:14px}
+.sector{position:relative;overflow:hidden;border-radius:6px;min-height:260px;background:var(--deck);text-decoration:none;display:flex;align-items:flex-end}
+.sector:first-child{grid-row:span 2;min-height:540px}
+.sector:last-child{grid-column:span 2}
+.sector img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.sector::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,15,.05) 25%,rgba(5,8,15,.96) 100%)}
+.sector:hover img{transform:scale(1.04)}
+.sector .txt{position:relative;z-index:1;padding:22px}
+.sector h3{font-size:22px;font-weight:700}
+.sector p{margin-top:6px;color:#C4CDDD;font-size:14.5px;line-height:1.5;max-width:40ch}
+.sector .tag{display:inline-block;margin-bottom:10px;font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi)}
+
+/* departures board */
+.departures{background:var(--deck)}
+.dboard{background:var(--board);border:1px solid #1B2436;border-radius:8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 20px 50px rgba(0,0,0,.4)}
+.dboard-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 20px;border-bottom:1px solid #1B2436}
+.dboard-title{font:600 14px/1 var(--mono);letter-spacing:.2em;color:var(--led);text-transform:uppercase}
+.dboard-title .gu,.dboard-title .hi{letter-spacing:0;margin-left:10px;color:var(--led-dim);font-size:13px}
+.dboard-title .gu{font-family:var(--gu)} .dboard-title .hi{font-family:var(--hi)}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;background:transparent;color:var(--mist);border:1px solid #243049;border-radius:3px;padding:8px 10px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--led);color:var(--board);border-color:var(--led)}
+.clock{font:500 13px var(--mono);color:var(--led);font-variant-numeric:tabular-nums}
+.dtable-wrap{overflow-x:auto}
+.dtable{width:100%;min-width:720px;border-collapse:collapse;font:500 14px/1.3 var(--mono);text-transform:uppercase;color:var(--led)}
+.dtable th{font-weight:500;font-size:11px;letter-spacing:.14em;color:var(--led-dim);text-align:left;padding:12px 20px 10px}
+.dtable td{padding:13px 20px;border-top:1px solid #121A29;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.dtable td:first-child{color:#FFD08A}
+.dtable tr:hover td{background:#0B111D}
+.st{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.st::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.st-done{color:var(--ok)}
+.st-live{color:var(--led)}
+.st-live::before{animation:blink 1.4s steps(2,start) infinite}
+@keyframes blink{to{visibility:hidden}}
+.dboard-foot{padding:12px 20px;border-top:1px solid #1B2436;font:400 12px var(--mono);color:var(--led-dim);letter-spacing:.06em}
+
+/* featured work */
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 20px;margin-top:56px}
+.card{margin:0}
+.card .ph{position:relative;overflow:hidden;border-radius:6px;aspect-ratio:4/3;background:var(--deck-2)}
+.card img{width:100%;height:100%;object-fit:cover}
+.card .board-sign{position:absolute;left:14px;top:14px;padding:5px 11px 6px;box-shadow:none;border-width:2px;outline-width:1px}
+.card .board-sign .en{font-size:14px}
+.card .board-sign .gu,.card .board-sign .hi{font-size:11.5px}
+.card figcaption{margin-top:14px}
+.card h3{font-size:19px;font-weight:700}
+.card .meta{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px;font:400 12.5px var(--mono);color:var(--mist)}
+
+/* products — light section */
+.light{background:var(--paper);color:var(--ink)}
+.light .eyebrow{color:#8A6516}
+.light .lede{color:var(--ink-2)}
+.prods{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #C9D0DC;border-left:1px solid #C9D0DC}
+.prod{display:grid;grid-template-columns:1fr 120px;gap:16px;align-items:center;padding:26px 24px;border-right:1px solid #C9D0DC;border-bottom:1px solid #C9D0DC;text-decoration:none;background:var(--paper);transition:background .2s}
+.prod:hover{background:#FFFFFF}
+.prod img{width:120px;height:120px;object-fit:contain;mix-blend-mode:multiply}
+.prod h3{font-size:19px;font-weight:700;color:var(--ink)}
+.prod p{margin-top:6px;font-size:14px;color:var(--ink-2);line-height:1.5}
+.prod .sku{display:block;margin-top:14px;font:500 12.5px var(--mono);color:#8A6516;font-variant-numeric:tabular-nums}
+.partner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:28px;padding:18px 22px;background:var(--paper-2);border-radius:4px;font-size:15px;color:var(--ink-2)}
+.partner b{color:var(--ink)}
+.partner a{font:600 14px var(--body);color:var(--ink);text-underline-offset:4px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{position:relative;padding:26px 24px 0 0;border-top:2px solid var(--rule)}
+.steps li::before{counter-increment:s;content:"0" counter(s);position:absolute;top:-2px;left:0;padding-top:10px;border-top:2px solid var(--gold);width:48px;font:600 12px var(--mono);color:var(--gold);letter-spacing:.1em}
+.steps h3{font-size:19px;font-weight:700;margin-top:18px}
+.steps p{margin-top:8px;color:var(--mist);font-size:15px;max-width:30ch}
+
+/* RFQ */
+.rfq{background:var(--deck);border-top:1px solid var(--rule)}
+.rfq .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,6vw,80px)}
+.rfq h2{font-size:clamp(32px,4.4vw,54px);font-weight:800;margin-top:14px}
+.direct{margin-top:32px;display:grid;gap:14px}
+.direct div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding-bottom:14px;border-bottom:1px solid var(--rule)}
+.direct dt{font:500 12px/1.9 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin:0}
+.direct dd{margin:0;font-size:17px;user-select:all}
+.direct a{text-decoration:none;color:var(--gold-hi)}
+form{background:var(--night);border:1px solid var(--rule);border-radius:8px;padding:clamp(20px,3vw,32px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{display:grid;gap:7px}
+.f.full{grid-column:1/-1}
+label{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mist)}
+input,select,textarea{width:100%;font:400 15.5px var(--body);color:var(--text);background:var(--deck);border:1px solid var(--rule);border-radius:4px;padding:12px 13px}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+.drop{display:flex;align-items:center;gap:14px;border:1px dashed #3A4C6E;border-radius:4px;padding:16px;color:var(--mist);font-size:14.5px;cursor:pointer}
+.drop input{position:absolute;width:1px;height:1px;opacity:0}
+.drop b{color:var(--text);font-weight:600}
+.drop:focus-within{border-color:var(--gold)}
+.form-foot{grid-column:1/-1;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.form-note{font-size:13.5px;color:var(--mist)}
+.toast{grid-column:1/-1;background:rgba(92,197,146,.12);border:1px solid rgba(92,197,146,.4);color:#BFEBD3;padding:12px 14px;border-radius:4px;font-size:14.5px}
+
+/* footer */
+footer{border-top:1px solid var(--rule);padding-block:48px 36px;color:var(--mist);font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer h4{margin:0 0 12px;font:500 11.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--text)}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--text)}
+.legal{grid-column:1/-1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;border-top:1px solid var(--rule);font:400 12.5px var(--mono)}
+
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;display:flex;align-items:center;gap:8px;background:#1FA855;color:#fff;text-decoration:none;font:600 14px var(--body);padding:12px 16px;border-radius:40px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.wa svg{width:20px;height:20px}
+
+@media (max-width:980px){
+  .nav ul,.nav .btn{display:none}
+  .menu{display:block}
+  .hero .wrap,.rfq .wrap{grid-template-columns:1fr}
+  .hero-fig .board-sign{left:12px;bottom:56px}
+  .proof .wrap{grid-template-columns:repeat(2,1fr)}
+  .proof div:nth-child(3){border-left:0;padding-left:0}
+  .proof div:nth-child(n+3){border-top:1px solid var(--rule)}
+  .sectors{grid-template-columns:1fr 1fr}
+  .sector:first-child{grid-column:1/-1;grid-row:auto;min-height:340px}
+  .sector:last-child{grid-column:auto}
+  .work,.prods{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:36px}
+  footer .wrap{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .sectors,.work,.prods,.steps{grid-template-columns:1fr}
+  .sector{min-height:220px}
+  form{grid-template-columns:1fr}
+  .prod{grid-template-columns:1fr 92px}
+  .prod img{width:92px;height:92px}
+  footer .wrap{grid-template-columns:1fr}
+  .wa span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Homepage mockup · Sept 2026 · Built from Kivasa's own project photos and data. Not the live site.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Kivasa Globaltech home">
+      <img src="img/k-mark.webp" alt="" width="34" height="33">
+      <span><b>KIVASA</b><small>GLOBALTECH</small></span>
+    </a>
+    <ul>
+      <li><a href="#sectors">Sectors</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#process">How we work</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a class="btn btn-gold" href="#quote">Request a quote</a>
+    <button class="menu" type="button" aria-label="Open menu">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Railway &amp; infrastructure lighting · Gujarat</span>
+      <h1>We light the stations India <em>travels through.</em></h1>
+      <p class="lede">Facade, platform and depot lighting for Indian Railways, EPC contractors and architects. Specified, supplied and supported by one team, through our Jaquar Lighting partnership.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#quote">Send us your BOQ <span aria-hidden="true">→</span></a>
+        <a class="btn btn-line" href="#projects">See 19 projects</a>
+      </div>
+    </div>
+    <figure class="hero-fig">
+      <img src="img/kalol.webp" alt="Kalol railway station at night, its facade lit in saffron, white and green and reflected in water" width="1024" height="768">
+      <div class="board-sign" aria-hidden="true">
+        <span class="gu">કલોલ</span><span class="hi">कलोल</span><span class="en">KALOL</span>
+      </div>
+      <figcaption><span>Kalol Railway Station · Facade lighting</span><span>Commissioned 2026</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="proof" aria-label="Track record">
+  <div class="wrap">
+    <div><b>14</b><span>Railway stations lit or in progress</span></div>
+    <div><b>11</b><span>Projects commissioned, 2025–26</span></div>
+    <div><b>08</b><span>Projects on site right now</span></div>
+    <div><b>13,764</b><span>Jaquar Lighting products we can supply</span></div>
+  </div>
+</section>
+
+<section class="sec" id="sectors">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Sectors</span>
+        <h2>Where our lighting works</h2>
+        <p class="lede">Each sector has its own standards, approvals and site conditions. We've delivered in all four.</p>
+      </div>
+    </div>
+    <div class="sectors">
+      <a class="sector" href="#projects">
+        <img src="img/dakor.webp" alt="Platform canopy lighting at Dakor railway station">
+        <div class="txt"><span class="tag">7 done · 7 underway</span><h3>Railway stations</h3><p>Platform, concourse and circulating-area lighting built for 24-hour public use.</p></div>
+      </a>
+      <a class="sector" href="#projects">
+        <img src="img/mehsana.webp" alt="Mehsana railway station facade lit in magenta">
+        <div class="txt"><span class="tag">Mehsana · Kalol · Shyamakhali</span><h3>Facade &amp; architectural</h3><p>Programmable facade lighting that turns a station into a landmark.</p></div>
+      </a>
+      <a class="sector" href="#projects">
+        <img src="img/valsad.webp" alt="Inspection pit lighting under a locomotive at Valsad loco shed">
+        <div class="txt"><span class="tag">Valsad · Jemi Solar</span><h3>Depots &amp; industrial</h3><p>Pit lights, high-bays and plant lighting for maintenance crews and factory floors.</p></div>
+      </a>
+      <a class="sector" href="#projects">
+        <img src="img/residence.webp" alt="Private residence designed by Ar. Sanjay Puri">
+        <div class="txt"><span class="tag">With Ar. Sanjay Puri</span><h3>Premium residential</h3><p>Indoor lighting and switches for architect-led homes.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec departures" id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Project board</span>
+        <h2>Every project, commissioned and underway</h2>
+        <p class="lede">Real names, real scope. Each row will open a case study with photos, fixture counts and the client's brief.</p>
+      </div>
+    </div>
+
+    <div class="dboard">
+      <div class="dboard-top">
+        <span class="dboard-title">Projects<span class="gu">પ્રોજેક્ટ્સ</span><span class="hi">परियोजनाएँ</span></span>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" data-f="all" aria-pressed="true">All 19</button>
+          <button type="button" data-f="done" aria-pressed="false">Commissioned</button>
+          <button type="button" data-f="live" aria-pressed="false">On site</button>
+        </div>
+        <span class="clock" id="clock" aria-label="Current time in India">--:-- IST</span>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th scope="col">Project</th><th scope="col">Scope</th><th scope="col">Year</th><th scope="col">Status</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div class="dboard-foot">Source: Kivasa completed-projects register, Sept 2026</div>
+    </div>
+
+    <div class="work">
+      <figure class="card">
+        <div class="ph">
+          <img src="img/mehsana.webp" alt="Mehsana railway station facade at night">
+          <div class="board-sign" aria-hidden="true"><span class="gu">મહેસાણા</span><span class="hi">मेहसाणा</span><span class="en">MEHSANA</span></div>
+        </div>
+        <figcaption><h3>Mehsana Railway Station</h3><div class="meta"><span>Facade lighting</span><span>2026</span></div></figcaption>
+      </figure>
+      <figure class="card">
+        <div class="ph">
+          <img src="img/dakor.webp" alt="Dakor railway station platform under lit canopy">
+          <div class="board-sign" aria-hidden="true"><span class="gu">ડાકોર</span><span class="hi">डाकोर</span><span class="en">DAKOR</span></div>
+        </div>
+        <figcaption><h3>Dakor Railway Station</h3><div class="meta"><span>Indoor &amp; outdoor lighting</span><span>2025</span></div></figcaption>
+      </figure>
+      <figure class="card">
+        <div class="ph">
+          <img src="img/pratapnagar.webp" alt="Pratapnagar railway station building lit at dusk">
+          <div class="board-sign" aria-hidden="true"><span class="gu">પ્રતાપનગર</span><span class="hi">प्रतापनगर</span><span class="en">PRATAPNAGAR</span></div>
+        </div>
+        <figcaption><h3>Pratapnagar Railway Station</h3><div class="meta"><span>Indoor &amp; outdoor lighting</span><span>2026</span></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec light" id="products">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Products</span>
+        <h2>The full Jaquar Lighting range, specified for your site</h2>
+        <p class="lede">Filter by application, wattage or IP rating and download datasheets. Prices are quoted per project.</p>
+      </div>
+      <a class="btn btn-line" href="#products" style="color:var(--ink);border-color:#B5BECC">Browse the catalogue →</a>
+    </div>
+    <div class="prods">
+      <a class="prod" href="#products"><div><h3>Facade</h3><p>Flex, linear and wall-washers for building outlines.</p><span class="sku">1,388 products</span></div><img src="img/p-flex.webp" alt="Serenea flex light strip"></a>
+      <a class="prod" href="#products"><div><h3>Commercial outdoor</h3><p>Street lights, floodlights and bollards for stations and campuses.</p><span class="sku">656 products</span></div><img src="img/p-street.webp" alt="LED street light"></a>
+      <a class="prod" href="#products"><div><h3>Industrial</h3><p>High-bays, well-glass and pit lights for sheds and plants.</p><span class="sku">Specified on request</span></div><img src="img/p-highbay.webp" alt="Industrial high-bay light"></a>
+      <a class="prod" href="#products"><div><h3>Commercial indoor</h3><p>Magnetic track, downlights and panels for concourses and offices.</p><span class="sku">1,360 products</span></div><img src="img/p-track.webp" alt="Track spotlight"></a>
+      <a class="prod" href="#products"><div><h3>Decorative</h3><p>Post-tops, pendants and heritage lanterns for public spaces.</p><span class="sku">1,032 products</span></div><img src="img/p-zenith.webp" alt="Zenith post-top lantern"></a>
+      <a class="prod" href="#products"><div><h3>Home &amp; switches</h3><p>Residential lighting, switches and smart controls.</p><span class="sku">784 products</span></div><img src="img/p-bulkhead.webp" alt="Bulkhead wall light"></a>
+    </div>
+    <div class="partner"><span><b>Jaquar Lighting partner.</b> Genuine products, manufacturer warranty, and a single point of contact from quote to handover.</span><a href="#quote">Ask about a product →</a></div>
+  </div>
+</section>
+
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">How we work</span>
+        <h2>From tender to switch-on</h2>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><h3>Share your BOQ</h3><p>Send the tender document, BOQ or drawings. A lighting list is enough to start.</p></li>
+      <li><h3>Technical review</h3><p>We check specs against site conditions and suggest equivalent or better fixtures.</p></li>
+      <li><h3>Supply &amp; dispatch</h3><p>Priced quote, confirmed schedule, and phased delivery to site.</p></li>
+      <li><h3>Commissioning support</h3><p>On-site help at installation, then warranty service after handover.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec rfq" id="quote">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Request a quote</span>
+      <h2>Send us the BOQ. We'll price it.</h2>
+      <p class="lede" style="margin-top:16px">Tell us about the project, attach whatever documents you have, and our team will come back with a priced quote.</p>
+      <dl class="direct">
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/918200461631" target="_blank" rel="noopener">+91 82004 61631</a></dd></div>
+        <div><dt>Email</dt><dd>info@kivasaglobaltech.com</dd></div>
+        <div><dt>Office</dt><dd>Full address goes here (Gujarat)</dd></div>
+      </dl>
+    </div>
+    <form id="rfq" novalidate>
+      <div class="f"><label for="q-name">Your name</label><input id="q-name" name="name" autocomplete="name" value="Rakesh Patel"></div>
+      <div class="f"><label for="q-org">Organisation</label><input id="q-org" name="org" autocomplete="organization" value="Western Railway, Vadodara Division"></div>
+      <div class="f"><label for="q-type">Project type</label>
+        <select id="q-type" name="type">
+          <option>Railway station</option><option>Facade / architectural</option><option>Depot / industrial</option><option>Street &amp; campus</option><option>Residential</option>
+        </select></div>
+      <div class="f"><label for="q-phone">Phone / WhatsApp</label><input id="q-phone" name="phone" autocomplete="tel" inputmode="tel" value="+91 98xxx xxxxx"></div>
+      <div class="f full"><label for="q-file">BOQ, tender or drawings</label>
+        <label class="drop" for="q-file"><input id="q-file" type="file" multiple accept=".pdf,.xlsx,.xls,.dwg,.jpg,.png"><span><b>Attach files</b> · PDF, Excel, DWG or photos</span></label></div>
+      <div class="f full"><label for="q-msg">Project details</label><textarea id="q-msg" name="msg">Facade and platform lighting for a station redevelopment, 2 platforms, approx. 180 fixtures. Tender closes next month.</textarea></div>
+      <div class="form-foot"><button class="btn btn-gold" type="submit">Send request</button><span class="form-note">Example details shown. This mockup doesn't send anything.</span></div>
+      <div class="toast" id="toast" hidden>Mockup only: on the live site this would reach the Kivasa sales team.</div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer id="about">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><img src="img/k-mark.webp" alt="" width="34" height="33"><span><b>KIVASA</b><small>GLOBALTECH</small></span></a>
+      <p style="margin-top:16px;max-width:36ch">Professional illumination for railways, infrastructure and architecture. Kivasa Globaltech Pvt Ltd.</p>
+    </div>
+    <div><h4>Sectors</h4><ul><li><a href="#sectors">Railway stations</a></li><li><a href="#sectors">Facade &amp; architectural</a></li><li><a href="#sectors">Depots &amp; industrial</a></li><li><a href="#sectors">Premium residential</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="#projects">Projects</a></li><li><a href="#products">Products</a></li><li><a href="#about">About</a></li><li><a href="#about">Company profile (PDF)</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>+91 82004 61631</li><li>info@kivasaglobaltech.com</li><li><a href="#about">LinkedIn</a></li></ul></div>
+    <div class="legal"><span>© 2026 Kivasa Globaltech Pvt Ltd</span><span>GSTIN · MSME No. · Vendor registrations</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/918200461631" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+(function(){
+  var projects = [
+    ["Kalol Railway Station","Facade lighting","2026","done"],
+    ["Mehsana Railway Station","Facade lighting","2026","done"],
+    ["Pratapnagar Railway Station","Indoor & outdoor lighting","2026","done"],
+    ["Valsad Loco Shed","Pit lights","2026","done"],
+    ["Private Residence · Ar. Sanjay Puri","Indoor lights & switches","2026","done"],
+    ["Karamsad Railway Station","Indoor & outdoor lighting","2025","done"],
+    ["Dakor Railway Station","Indoor & outdoor lighting","2025","done"],
+    ["Mehemdavad Railway Station","Indoor & outdoor lighting","2025","done"],
+    ["Shyamakhali Railway Station","Facade lighting","2025","done"],
+    ["Kankaria Railway Colony","Street lighting","2025","done"],
+    ["Sabarmati Railway Colony","Street lighting","2025","done"],
+    ["Himmatnagar Railway Station","Facade lighting","—","live"],
+    ["Somnath Railway Station","Indoor & outdoor lighting","—","live"],
+    ["Bhachau Railway Station","Facade lighting","—","live"],
+    ["Patan Railway Station","Facade lighting","—","live"],
+    ["Bhildi Railway Station","Facade lighting","—","live"],
+    ["Unjha Railway Station","Facade lighting","—","live"],
+    ["Sidhpur Railway Station","Facade lighting","—","live"],
+    ["Jemi Solar Plant, Navsari","Industrial lighting","—","live"]
+  ];
+  var tbody = document.getElementById("rows");
+  function render(f){
+    tbody.innerHTML = "";
+    projects.forEach(function(p){
+      if (f !== "all" && p[3] !== f) return;
+      var tr = document.createElement("tr");
+      [p[0], p[1], p[2]].forEach(function(v){ var td = document.createElement("td"); td.textContent = v; tr.appendChild(td); });
+      var td = document.createElement("td"), s = document.createElement("span");
+      s.className = "st " + (p[3] === "done" ? "st-done" : "st-live");
+      s.textContent = p[3] === "done" ? "Commissioned" : "On site";
+      td.appendChild(s); tr.appendChild(td); tbody.appendChild(tr);
+    });
+  }
+  render("all");
+  document.querySelectorAll(".filters button").forEach(function(b){
+    b.addEventListener("click", function(){
+      document.querySelectorAll(".filters button").forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render(b.dataset.f);
+    });
+  });
+
+  var clock = document.getElementById("clock");
+  function tick(){
+    try {
+      clock.textContent = new Intl.DateTimeFormat("en-GB",{hour:"2-digit",minute:"2-digit",hour12:false,timeZone:"Asia/Kolkata"}).format(new Date()) + " IST";
+    } catch(e) {}
+  }
+  tick(); setInterval(tick, 15000);
+
+  document.getElementById("rfq").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("toast").hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
