@@ -1,736 +1,741 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Kivasa Globaltech Pvt Ltd - Jaquar Lighting Catalog</title>
-    <meta name="description" content="Browse our comprehensive catalog of Jaquar lighting products - Street Lights, Flood Lights, Panel Lights, Bay Lights, and more.">
-    <link rel="icon" type="image/png" href="Resources/Logos/New Logo Kivasa PNG.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Products | Jaquar Lighting catalogue | Kivasa Globaltech</title>
+<meta name="description" content="Browse Jaquar Lighting street lights, high-bays, floodlights, facade strip, bollards, post-tops, downlights and panels supplied by Kivasa Globaltech. Prices quoted per project.">
+<link rel="canonical" href="https://kivasaglobaltech.com/products.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Products | Jaquar Lighting catalogue | Kivasa Globaltech">
+<meta property="og:description" content="Browse Jaquar Lighting street lights, high-bays, floodlights, facade strip, bollards, post-tops, downlights and panels supplied by Kivasa Globaltech. Prices quoted per project.">
+<meta property="og:url" content="https://kivasaglobaltech.com/products.html">
+<meta property="og:image" content="https://kivasaglobaltech.com/assets/img/projects/kalol.webp">
+<meta name="theme-color" content="#0A101C">
+<link rel="icon" type="image/png" href="assets/img/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+Devanagari:wght@600&family=Noto+Sans+Gujarati:wght@600&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-
-    <!-- NAVBAR -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="Resources/Logos/New Logo Kivasa PNG.png" alt="Kivasa Globaltech">
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="jaquar-products.html" class="nav-link active">Products</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="contact.html" class="nav-link btn-cta-nav">Get a Quote</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- PAGE HEADER -->
-    <section class="page-header" style="background-image: url('Resources/Stock Images for Background/facade lighting stock image.png');">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="products-header-flex">
-                <div>
-                    <span class="section-tag">Product Catalog</span>
-                    <h1>Jaquar Lighting Products</h1>
-                    <p>Premium lighting solutions for every infrastructure need. Browse our complete catalog.</p>
-                </div>
-                <div class="brand-badge">
-                    <img src="Resources/Logos/Jaquar White Logo.png" alt="Jaquar" class="brand-badge-logo">
-                    <span>Authorized Partner</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRODUCTS LISTING -->
-    <section class="section products-section">
-        <div class="container">
-            <!-- Category Filters -->
-            <div class="product-filters">
-                <button class="filter-btn active" data-filter="all">All Products</button>
-                <button class="filter-btn" data-filter="street-light">Street Lights</button>
-                <button class="filter-btn" data-filter="flood-light">Flood Lights</button>
-                <button class="filter-btn" data-filter="panel-light">Panel Lights</button>
-                <button class="filter-btn" data-filter="bay-light">Bay Lights</button>
-                <button class="filter-btn" data-filter="downlight">Downlights</button>
-                <button class="filter-btn" data-filter="facade-light">Facade Lights</button>
-                <button class="filter-btn" data-filter="bollard">Bollard Lights</button>
-                <button class="filter-btn" data-filter="track-light">Track Lights</button>
-            </div>
-
-            <!-- Search -->
-            <div class="product-search">
-                <i class="fas fa-search"></i>
-                <input type="text" id="productSearch" placeholder="Search products by name, category, or specification...">
-            </div>
-
-            <!-- Product Grid -->
-            <div class="products-grid" id="productsGrid">
-
-                <!-- STREET LIGHTS -->
-                <div class="product-card" data-category="street-light" data-name="Jaquar Prima Street Light 50W" data-specs="50W LED IP66 150lm/W">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-road"></i></div>
-                        <span class="product-badge">Street Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Prima Street Light 50W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 50W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP66</span>
-                            <span><i class="fas fa-sun"></i> 150 lm/W</span>
-                        </div>
-                        <p class="product-desc">High-efficiency LED street light designed for urban roads and residential areas. Die-cast aluminium housing with superior heat dissipation.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>50W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>150 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>7,500 lm</td></tr>
-                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
-                            <tr><td>IP Rating</td><td>IP66</td></tr>
-                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
-                            <tr><td>Lens</td><td>Tempered Glass</td></tr>
-                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
-                            <tr><td>Mounting</td><td>Pole Mount (60mm)</td></tr>
-                            <tr><td>Warranty</td><td>5 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="street-light" data-name="Jaquar Prima Street Light 100W" data-specs="100W LED IP66 150lm/W">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-road"></i></div>
-                        <span class="product-badge">Street Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Prima Street Light 100W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 100W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP66</span>
-                            <span><i class="fas fa-sun"></i> 150 lm/W</span>
-                        </div>
-                        <p class="product-desc">Heavy-duty street light for highways and arterial roads. Advanced optics with anti-glare design for traffic safety.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>100W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>150 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>15,000 lm</td></tr>
-                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
-                            <tr><td>IP Rating</td><td>IP66</td></tr>
-                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
-                            <tr><td>Lens</td><td>Tempered Glass</td></tr>
-                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
-                            <tr><td>Mounting</td><td>Pole Mount (60mm)</td></tr>
-                            <tr><td>Warranty</td><td>5 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="street-light" data-name="Jaquar Prima Street Light 150W" data-specs="150W LED IP66 150lm/W">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-road"></i></div>
-                        <span class="product-badge">Street Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Prima Street Light 150W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 150W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP66</span>
-                            <span><i class="fas fa-sun"></i> 150 lm/W</span>
-                        </div>
-                        <p class="product-desc">Premium high-output street light for expressways and national highways. Adjustable mounting bracket with multiple beam angles.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>150W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>150 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>22,500 lm</td></tr>
-                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
-                            <tr><td>IP Rating</td><td>IP66</td></tr>
-                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
-                            <tr><td>Lens</td><td>Tempered Glass</td></tr>
-                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
-                            <tr><td>Mounting</td><td>Adjustable Pole Mount</td></tr>
-                            <tr><td>Warranty</td><td>5 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- FLOOD LIGHTS -->
-                <div class="product-card" data-category="flood-light" data-name="Jaquar Blaze LED Flood Light 100W" data-specs="100W LED IP65 130lm/W">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-broadcast-tower"></i></div>
-                        <span class="product-badge">Flood Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Blaze Flood Light 100W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 100W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP65</span>
-                            <span><i class="fas fa-sun"></i> 130 lm/W</span>
-                        </div>
-                        <p class="product-desc">Versatile flood light for facades, sports grounds, and industrial areas. Wide beam angle with uniform light distribution.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>100W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>130 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>13,000 lm</td></tr>
-                            <tr><td>CCT</td><td>6500K (Daylight)</td></tr>
-                            <tr><td>Beam Angle</td><td>120°</td></tr>
-                            <tr><td>IP Rating</td><td>IP65</td></tr>
-                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
-                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
-                            <tr><td>Mounting</td><td>Adjustable Bracket</td></tr>
-                            <tr><td>Warranty</td><td>3 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="flood-light" data-name="Jaquar Blaze LED Flood Light 200W" data-specs="200W LED IP65 130lm/W">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-broadcast-tower"></i></div>
-                        <span class="product-badge">Flood Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Blaze Flood Light 200W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 200W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP65</span>
-                            <span><i class="fas fa-sun"></i> 130 lm/W</span>
-                        </div>
-                        <p class="product-desc">High-power flood light for large areas, stadium perimeters, and industrial yards. Robust construction for extreme conditions.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>200W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>130 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>26,000 lm</td></tr>
-                            <tr><td>CCT</td><td>6500K (Daylight)</td></tr>
-                            <tr><td>Beam Angle</td><td>120°</td></tr>
-                            <tr><td>IP Rating</td><td>IP65</td></tr>
-                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
-                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
-                            <tr><td>Mounting</td><td>Adjustable Bracket</td></tr>
-                            <tr><td>Warranty</td><td>3 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="flood-light" data-name="Jaquar Blaze LED Flood Light 400W" data-specs="400W LED IP66 140lm/W">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-broadcast-tower"></i></div>
-                        <span class="product-badge">Flood Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Blaze Flood Light 400W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 400W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP66</span>
-                            <span><i class="fas fa-sun"></i> 140 lm/W</span>
-                        </div>
-                        <p class="product-desc">Ultra high-output flood light for stadiums, airports, and large infrastructure projects. Modular design with individual LED modules.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>400W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>140 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>56,000 lm</td></tr>
-                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
-                            <tr><td>Beam Angle</td><td>60°/90°/120°</td></tr>
-                            <tr><td>IP Rating</td><td>IP66</td></tr>
-                            <tr><td>Housing</td><td>Die-cast Aluminium</td></tr>
-                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
-                            <tr><td>Mounting</td><td>Heavy-duty Bracket</td></tr>
-                            <tr><td>Warranty</td><td>5 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- PANEL LIGHTS -->
-                <div class="product-card" data-category="panel-light" data-name="Jaquar Stellar Slim Panel 18W" data-specs="18W LED IP40 110lm/W Round/Square">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-th-large"></i></div>
-                        <span class="product-badge">Panel Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Stellar Slim Panel 18W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 18W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP40</span>
-                            <span><i class="fas fa-sun"></i> 110 lm/W</span>
-                        </div>
-                        <p class="product-desc">Ultra-slim surface-mounted panel light for offices, corridors, and commercial spaces. Available in round and square configurations.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>18W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>110 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>1,980 lm</td></tr>
-                            <tr><td>CCT</td><td>4000K (Neutral White)</td></tr>
-                            <tr><td>IP Rating</td><td>IP40</td></tr>
-                            <tr><td>Size</td><td>220mm (Round) / 220x220mm (Square)</td></tr>
-                            <tr><td>Housing</td><td>PPMA + Aluminium</td></tr>
-                            <tr><td>Lifespan</td><td>30,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>220-240V AC</td></tr>
-                            <tr><td>Mounting</td><td>Surface / Recessed</td></tr>
-                            <tr><td>Warranty</td><td>2 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="panel-light" data-name="Jaquar Stellar 2x2 Panel 40W" data-specs="40W LED IP40 120lm/W Backlit">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-th-large"></i></div>
-                        <span class="product-badge">Panel Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Stellar 2x2 Backlit Panel 40W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 40W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP40</span>
-                            <span><i class="fas fa-sun"></i> 120 lm/W</span>
-                        </div>
-                        <p class="product-desc">Premium backlit panel for false-ceiling installations in commercial buildings, offices, and railway stations. Uniform, flicker-free output.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>40W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>120 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>4,800 lm</td></tr>
-                            <tr><td>CCT</td><td>4000K / 6500K</td></tr>
-                            <tr><td>IP Rating</td><td>IP40</td></tr>
-                            <tr><td>Size</td><td>600x600mm</td></tr>
-                            <tr><td>Type</td><td>Backlit Panel</td></tr>
-                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>220-240V AC</td></tr>
-                            <tr><td>Mounting</td><td>Recessed (Grid Ceiling)</td></tr>
-                            <tr><td>Warranty</td><td>3 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- BAY LIGHTS -->
-                <div class="product-card" data-category="bay-light" data-name="Jaquar Forge High Bay 100W" data-specs="100W LED IP65 140lm/W Industrial">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-industry"></i></div>
-                        <span class="product-badge">Bay Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Forge High Bay 100W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 100W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP65</span>
-                            <span><i class="fas fa-sun"></i> 140 lm/W</span>
-                        </div>
-                        <p class="product-desc">Industrial high bay light for warehouses, factories, and production floors. Superior heat management with finned aluminium body.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>100W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>140 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>14,000 lm</td></tr>
-                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
-                            <tr><td>Beam Angle</td><td>90° / 120°</td></tr>
-                            <tr><td>IP Rating</td><td>IP65</td></tr>
-                            <tr><td>Housing</td><td>Finned Die-cast Aluminium</td></tr>
-                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
-                            <tr><td>Mounting Height</td><td>6-10m</td></tr>
-                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
-                            <tr><td>Warranty</td><td>5 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="bay-light" data-name="Jaquar Forge High Bay 200W" data-specs="200W LED IP65 140lm/W Industrial">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-industry"></i></div>
-                        <span class="product-badge">Bay Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Forge High Bay 200W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 200W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP65</span>
-                            <span><i class="fas fa-sun"></i> 140 lm/W</span>
-                        </div>
-                        <p class="product-desc">High-output bay light for large warehouses and manufacturing plants. Replaceable LED driver for easy maintenance.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>200W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>140 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>28,000 lm</td></tr>
-                            <tr><td>CCT</td><td>5700K (Cool White)</td></tr>
-                            <tr><td>Beam Angle</td><td>90° / 120°</td></tr>
-                            <tr><td>IP Rating</td><td>IP65</td></tr>
-                            <tr><td>Housing</td><td>Finned Die-cast Aluminium</td></tr>
-                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
-                            <tr><td>Mounting Height</td><td>8-15m</td></tr>
-                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
-                            <tr><td>Warranty</td><td>5 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- DOWNLIGHTS -->
-                <div class="product-card" data-category="downlight" data-name="Jaquar Neve LED Downlight 15W" data-specs="15W LED IP44 100lm/W Recessed">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-circle"></i></div>
-                        <span class="product-badge">Downlight</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Neve LED Downlight 15W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 15W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP44</span>
-                            <span><i class="fas fa-sun"></i> 100 lm/W</span>
-                        </div>
-                        <p class="product-desc">Elegant recessed downlight for offices, lobbies, and commercial interiors. Anti-glare diffuser for visual comfort.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>15W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>100 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>1,500 lm</td></tr>
-                            <tr><td>CCT</td><td>3000K / 4000K / 6500K</td></tr>
-                            <tr><td>Beam Angle</td><td>90°</td></tr>
-                            <tr><td>IP Rating</td><td>IP44</td></tr>
-                            <tr><td>Cut-out</td><td>150mm</td></tr>
-                            <tr><td>Lifespan</td><td>30,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>220-240V AC</td></tr>
-                            <tr><td>Mounting</td><td>Recessed</td></tr>
-                            <tr><td>Warranty</td><td>2 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="downlight" data-name="Jaquar Neve LED COB Downlight 30W" data-specs="30W COB LED IP44 90lm/W Adjustable">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-circle"></i></div>
-                        <span class="product-badge">Downlight</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Neve COB Downlight 30W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 30W COB</span>
-                            <span><i class="fas fa-shield-alt"></i> IP44</span>
-                            <span><i class="fas fa-sun"></i> 90 lm/W</span>
-                        </div>
-                        <p class="product-desc">Adjustable COB downlight with tiltable head for accent and general lighting. Premium aluminium reflector for sharp beam control.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>30W</td></tr>
-                            <tr><td>LED Type</td><td>COB (Chip on Board)</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>90 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>2,700 lm</td></tr>
-                            <tr><td>CCT</td><td>3000K / 4000K</td></tr>
-                            <tr><td>Beam Angle</td><td>24° / 36° / 60°</td></tr>
-                            <tr><td>IP Rating</td><td>IP44</td></tr>
-                            <tr><td>Cut-out</td><td>175mm</td></tr>
-                            <tr><td>Lifespan</td><td>30,000 hours</td></tr>
-                            <tr><td>Tilt</td><td>30° Adjustable</td></tr>
-                            <tr><td>Warranty</td><td>2 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- FACADE LIGHTS -->
-                <div class="product-card" data-category="facade-light" data-name="Jaquar Aura Wall Washer 36W" data-specs="36W LED IP65 RGB Linear Wall Washer">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-building"></i></div>
-                        <span class="product-badge">Facade Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Aura Wall Washer 36W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 36W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP65</span>
-                            <span><i class="fas fa-palette"></i> RGB</span>
-                        </div>
-                        <p class="product-desc">Linear RGB wall washer for architectural facade lighting. DMX512 compatible with seamless colour transitions.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>36W</td></tr>
-                            <tr><td>LED Type</td><td>SMD RGB</td></tr>
-                            <tr><td>Colour</td><td>RGB (16.7M colours)</td></tr>
-                            <tr><td>Control</td><td>DMX512 / Stand-alone</td></tr>
-                            <tr><td>IP Rating</td><td>IP65</td></tr>
-                            <tr><td>Length</td><td>1000mm</td></tr>
-                            <tr><td>Housing</td><td>Anodized Aluminium</td></tr>
-                            <tr><td>Beam Angle</td><td>30° x 60°</td></tr>
-                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>24V DC</td></tr>
-                            <tr><td>Warranty</td><td>3 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="facade-light" data-name="Jaquar Aura Facade Spot 18W" data-specs="18W LED IP65 Narrow Beam Facade Spot">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-building"></i></div>
-                        <span class="product-badge">Facade Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Aura Facade Spot 18W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 18W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP65</span>
-                            <span><i class="fas fa-sun"></i> Narrow Beam</span>
-                        </div>
-                        <p class="product-desc">Compact facade spotlight for architectural accent lighting. Narrow beam angle for dramatic column and pillar illumination.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>18W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>100 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>1,800 lm</td></tr>
-                            <tr><td>CCT</td><td>3000K (Warm White)</td></tr>
-                            <tr><td>Beam Angle</td><td>8° / 15° / 25°</td></tr>
-                            <tr><td>IP Rating</td><td>IP65</td></tr>
-                            <tr><td>Housing</td><td>Powder-coated Aluminium</td></tr>
-                            <tr><td>Lifespan</td><td>50,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>100-270V AC</td></tr>
-                            <tr><td>Mounting</td><td>Surface / Bracket</td></tr>
-                            <tr><td>Warranty</td><td>3 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- BOLLARD LIGHTS -->
-                <div class="product-card" data-category="bollard" data-name="Jaquar Terra LED Bollard 12W" data-specs="12W LED IP65 Landscape Bollard">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-chess-rook"></i></div>
-                        <span class="product-badge">Bollard Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Terra LED Bollard 12W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 12W LED</span>
-                            <span><i class="fas fa-shield-alt"></i> IP65</span>
-                            <span><i class="fas fa-sun"></i> 90 lm/W</span>
-                        </div>
-                        <p class="product-desc">Modern bollard light for pathways, gardens, and landscape areas. Corrosion-resistant housing for long-lasting outdoor performance.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>12W</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>90 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>1,080 lm</td></tr>
-                            <tr><td>CCT</td><td>3000K (Warm White)</td></tr>
-                            <tr><td>IP Rating</td><td>IP65</td></tr>
-                            <tr><td>Height</td><td>800mm</td></tr>
-                            <tr><td>Housing</td><td>SS304 + Aluminium</td></tr>
-                            <tr><td>Lifespan</td><td>30,000 hours</td></tr>
-                            <tr><td>Input Voltage</td><td>220-240V AC</td></tr>
-                            <tr><td>Mounting</td><td>Foundation Bolt</td></tr>
-                            <tr><td>Warranty</td><td>3 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- TRACK LIGHTS -->
-                <div class="product-card" data-category="track-light" data-name="Jaquar Beam LED Track Light 30W" data-specs="30W COB LED Track Mounted Commercial">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-adjust"></i></div>
-                        <span class="product-badge">Track Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Beam Track Light 30W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 30W COB</span>
-                            <span><i class="fas fa-shield-alt"></i> IP20</span>
-                            <span><i class="fas fa-sun"></i> 85 lm/W</span>
-                        </div>
-                        <p class="product-desc">Professional track-mounted spotlight for retail, galleries, and showrooms. 355° rotation and 90° tilt for precise light direction.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>30W</td></tr>
-                            <tr><td>LED Type</td><td>COB</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>85 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>2,550 lm</td></tr>
-                            <tr><td>CCT</td><td>3000K / 4000K</td></tr>
-                            <tr><td>Beam Angle</td><td>24° / 36°</td></tr>
-                            <tr><td>IP Rating</td><td>IP20</td></tr>
-                            <tr><td>CRI</td><td>>90</td></tr>
-                            <tr><td>Rotation</td><td>355° H / 90° V</td></tr>
-                            <tr><td>Track Type</td><td>3-Circuit</td></tr>
-                            <tr><td>Warranty</td><td>2 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="product-card" data-category="track-light" data-name="Jaquar Beam LED Track Light 20W" data-specs="20W COB LED Track Mounted Retail">
-                    <div class="product-image">
-                        <div class="product-placeholder"><i class="fas fa-adjust"></i></div>
-                        <span class="product-badge">Track Light</span>
-                    </div>
-                    <div class="product-info">
-                        <h3>Jaquar Beam Track Light 20W</h3>
-                        <div class="product-specs-brief">
-                            <span><i class="fas fa-bolt"></i> 20W COB</span>
-                            <span><i class="fas fa-shield-alt"></i> IP20</span>
-                            <span><i class="fas fa-sun"></i> 85 lm/W</span>
-                        </div>
-                        <p class="product-desc">Compact track light for retail and hospitality environments. High CRI for accurate colour rendering of merchandise.</p>
-                        <button class="btn btn-outline btn-sm product-view-btn" onclick="openProductModal(this)">View Details</button>
-                    </div>
-                    <div class="product-full-specs" style="display:none">
-                        <table>
-                            <tr><td>Wattage</td><td>20W</td></tr>
-                            <tr><td>LED Type</td><td>COB</td></tr>
-                            <tr><td>Luminous Efficacy</td><td>85 lm/W</td></tr>
-                            <tr><td>Total Lumens</td><td>1,700 lm</td></tr>
-                            <tr><td>CCT</td><td>3000K / 4000K</td></tr>
-                            <tr><td>Beam Angle</td><td>15° / 24° / 36°</td></tr>
-                            <tr><td>IP Rating</td><td>IP20</td></tr>
-                            <tr><td>CRI</td><td>>90</td></tr>
-                            <tr><td>Rotation</td><td>355° H / 90° V</td></tr>
-                            <tr><td>Track Type</td><td>3-Circuit</td></tr>
-                            <tr><td>Warranty</td><td>2 Years</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- No Results -->
-            <div class="no-products" id="noProducts" style="display:none">
-                <i class="fas fa-search"></i>
-                <h3>No products found</h3>
-                <p>Try adjusting your search or filter criteria.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRODUCT MODAL -->
-    <div class="product-modal" id="productModal">
-        <div class="modal-overlay" onclick="closeProductModal()"></div>
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeProductModal()"><i class="fas fa-times"></i></button>
-            <div class="modal-body">
-                <div class="modal-image">
-                    <div class="product-placeholder modal-placeholder"><i class="fas fa-lightbulb"></i></div>
-                </div>
-                <div class="modal-details">
-                    <span class="product-badge modal-badge" id="modalCategory"></span>
-                    <h2 id="modalTitle"></h2>
-                    <p id="modalDesc"></p>
-                    <h4>Specifications</h4>
-                    <div id="modalSpecs"></div>
-                    <div class="modal-actions">
-                        <a href="contact.html" class="btn btn-primary">Enquire Now <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://wa.me/918200461631" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA -->
-    <section class="section contact-cta">
-        <div class="container">
-            <div class="cta-box">
-                <div class="cta-content">
-                    <h2>Need a Custom Product Solution?</h2>
-                    <p>Can't find what you're looking for? We source a wide range of lighting products directly from OEMs. Contact us for custom requirements.</p>
-                    <div class="cta-actions">
-                        <a href="contact.html" class="btn btn-primary">Send an Enquiry <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://wa.me/918200461631" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <img src="Resources/Logos/New Logo Kivasa PNG.png" alt="Kivasa Globaltech" class="footer-logo">
-                    <p>Lighting the Backbone of Infrastructure. Premium lighting and electrical solutions for Railways, Commercial, and Industrial sectors.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#lighting">Bulk Lighting Solutions</a></li>
-                        <li><a href="services.html#railway">Railway Projects</a></li>
-                        <li><a href="services.html#electrical">Electrical Utilities</a></li>
-                        <li><a href="services.html#sourcing">Global Sourcing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> info@kivasaglobaltech.com</li>
-                        <li><i class="fas fa-phone"></i> +91 82004 61631</li>
-                        <li><i class="fas fa-map-marker-alt"></i> India</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Kivasa Globaltech Pvt Ltd. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/918200461631" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Kivasa Globaltech home">
+      <img src="assets/img/brand/k-mark.webp" alt="" width="34" height="33">
+      <span><b>KIVASA</b><small>GLOBALTECH</small></span>
     </a>
-
-    <script src="script.js"></script>
+    <ul class="nav-links"><li><a href="services.html">Sectors &amp; Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="products.html" aria-current="page">Products</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li class="nav-cta"><a href="contact.html">Request a quote →</a></li></ul>
+    <a class="btn btn-gold" href="contact.html">Request a quote</a>
+    <button class="menu" type="button" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+  </div>
+</header>
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Products · Jaquar Lighting</span>
+    <h1>Lighting for every part of the site</h1>
+    <p class="lede">A selection of 164 fittings from the Jaquar Lighting range. We can supply all 13,764 products in the current price list. Prices are quoted per project; tap any product to ask.</p>
+  </div>
+</section>
+<section class="light" style="padding-block:0 clamp(64px,9vw,112px)">
+  <div class="wrap">
+    <div class="cat-bar">
+      <div class="chips" role="group" aria-label="Filter by category"><button type="button" data-cat="all" aria-pressed="true">All<span>164</span></button><button type="button" data-cat="street" aria-pressed="false">Street &amp; area<span>14</span></button><button type="button" data-cat="industrial" aria-pressed="false">Industrial &amp; flood<span>7</span></button><button type="button" data-cat="facade" aria-pressed="false">Facade &amp; linear<span>13</span></button><button type="button" data-cat="landscape" aria-pressed="false">Landscape &amp; outdoor wall<span>31</span></button><button type="button" data-cat="posttop" aria-pressed="false">Post-tops &amp; heritage<span>27</span></button><button type="button" data-cat="indoor" aria-pressed="false">Commercial indoor<span>35</span></button><button type="button" data-cat="home" aria-pressed="false">Home<span>13</span></button><button type="button" data-cat="accessories" aria-pressed="false">Drivers &amp; accessories<span>24</span></button></div>
+      <div class="search"><label class="skip" for="product-search">Search products</label><input id="product-search" type="search" placeholder="Search by name, e.g. Emina"></div>
+    </div>
+    <p class="count" id="product-count" aria-live="polite">164 products</p>
+    <div class="pgrid">
+      <article class="pcard" data-cat="street" data-name="agni">
+  <div class="pimg"><img src="assets/img/products/agni.webp" alt="Jaquar Agni" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Agni</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Agni." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="desert mirage">
+  <div class="pimg"><img src="assets/img/products/desert-mirage.webp" alt="Jaquar Desert Mirage" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Desert Mirage</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Desert%20Mirage." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="hummer">
+  <div class="pimg"><img src="assets/img/products/hummer.webp" alt="Jaquar Hummer" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Hummer</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Hummer." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="kriza emergency street light">
+  <div class="pimg"><img src="assets/img/products/kriza-emergency-street-light.webp" alt="Jaquar Kriza Emergency Street Light" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Kriza Emergency Street Light</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Kriza%20Emergency%20Street%20Light." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="led street light 36w">
+  <div class="pimg"><img src="assets/img/products/osl-gry-lpcrsrt36wlc.webp" alt="Jaquar LED Street Light 36W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>LED Street Light 36W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20LED%20Street%20Light%2036W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="pcr street light">
+  <div class="pimg"><img src="assets/img/products/pcr.webp" alt="Jaquar PCR Street Light" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>PCR Street Light</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20PCR%20Street%20Light." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="shoe box">
+  <div class="pimg"><img src="assets/img/products/shoe-box.webp" alt="Jaquar Shoe Box" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Shoe Box</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Shoe%20Box." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="solis">
+  <div class="pimg"><img src="assets/img/products/solis.webp" alt="Jaquar Solis" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Solis</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Solis." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="street light 25w">
+  <div class="pimg"><img src="assets/img/products/street-light-25w.webp" alt="Jaquar Street Light 25W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Street Light 25W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Street%20Light%2025W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="street light 25–30w">
+  <div class="pimg"><img src="assets/img/products/street-light-25-30w.webp" alt="Jaquar Street Light 25–30W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Street Light 25–30W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Street%20Light%2025%E2%80%9330W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="street light 45w">
+  <div class="pimg"><img src="assets/img/products/street-light-45w.webp" alt="Jaquar Street Light 45W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Street Light 45W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Street%20Light%2045W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="street light 45–72w">
+  <div class="pimg"><img src="assets/img/products/street-light-45-72w.webp" alt="Jaquar Street Light 45–72W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Street Light 45–72W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Street%20Light%2045%E2%80%9372W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="street light 90–200w">
+  <div class="pimg"><img src="assets/img/products/street-light-90-200w.webp" alt="Jaquar Street Light 90–200W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Street Light 90–200W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Street%20Light%2090%E2%80%93200W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="street" data-name="trump">
+  <div class="pimg"><img src="assets/img/products/trump.webp" alt="Jaquar Trump" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Street &amp; area</span><h3>Trump</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Trump." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="industrial" data-name="bulk head">
+  <div class="pimg"><img src="assets/img/products/bulk-head.webp" alt="Jaquar Bulk Head" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Industrial &amp; flood</span><h3>Bulk Head</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Bulk%20Head." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="industrial" data-name="faro floodlight 30–50w">
+  <div class="pimg"><img src="assets/img/products/faro-30-50w.webp" alt="Jaquar Faro Floodlight 30–50W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Industrial &amp; flood</span><h3>Faro Floodlight 30–50W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Faro%20Floodlight%2030%E2%80%9350W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="industrial" data-name="highbay">
+  <div class="pimg"><img src="assets/img/products/highbay.webp" alt="Jaquar Highbay" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Industrial &amp; flood</span><h3>Highbay</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Highbay." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="industrial" data-name="ledstar floodlight 70–400w">
+  <div class="pimg"><img src="assets/img/products/ledstar-70-400w.webp" alt="Jaquar Ledstar Floodlight 70–400W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Industrial &amp; flood</span><h3>Ledstar Floodlight 70–400W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Ledstar%20Floodlight%2070%E2%80%93400W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="industrial" data-name="pride (weather-proof ip65 rated)">
+  <div class="pimg"><img src="assets/img/products/pride-weather-proof-ip65-rated.webp" alt="Jaquar Pride (Weather-proof IP65 rated)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Industrial &amp; flood</span><h3>Pride (Weather-proof IP65 rated)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Pride%20%28Weather-proof%20IP65%20rated%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="industrial" data-name="ultralite highbay">
+  <div class="pimg"><img src="assets/img/products/ultralite-highbay.webp" alt="Jaquar Ultralite Highbay" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Industrial &amp; flood</span><h3>Ultralite Highbay</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Ultralite%20Highbay." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="industrial" data-name="well glass">
+  <div class="pimg"><img src="assets/img/products/well-glass.webp" alt="Jaquar Well Glass" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Industrial &amp; flood</span><h3>Well Glass</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Well%20Glass." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="cob indoor strip light">
+  <div class="pimg"><img src="assets/img/products/cob-indoor-strip-light.webp" alt="Jaquar COB Indoor Strip Light" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>COB Indoor Strip Light</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20COB%20Indoor%20Strip%20Light." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="garnet">
+  <div class="pimg"><img src="assets/img/products/garnet.webp" alt="Jaquar Garnet" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>Garnet</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Garnet." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="glaze">
+  <div class="pimg"><img src="assets/img/products/glaze.webp" alt="Jaquar Glaze" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>Glaze</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Glaze." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="glaze ultra (pc)">
+  <div class="pimg"><img src="assets/img/products/glaze-ultra-pc.webp" alt="Jaquar Glaze Ultra (PC)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>Glaze Ultra (PC)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Glaze%20Ultra%20%28PC%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="glaze ultra aluminium">
+  <div class="pimg"><img src="assets/img/products/glaze-ultra-aluminium.webp" alt="Jaquar Glaze Ultra Aluminium" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>Glaze Ultra Aluminium</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Glaze%20Ultra%20Aluminium." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="ip20 strip light (24 v dc)">
+  <div class="pimg"><img src="assets/img/products/ip20-strip-light-24-v-dc.webp" alt="Jaquar IP20 Strip Light (24 V DC)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>IP20 Strip Light (24 V DC)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20IP20%20Strip%20Light%20%2824%20V%20DC%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="ip65 strip light (24 v dc)">
+  <div class="pimg"><img src="assets/img/products/ip65-strip-light-24-v-dc.webp" alt="Jaquar IP65 Strip Light (24 V DC)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>IP65 Strip Light (24 V DC)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20IP65%20Strip%20Light%20%2824%20V%20DC%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="janus">
+  <div class="pimg"><img src="assets/img/products/janus.webp" alt="Jaquar Janus" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>Janus</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Janus." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="ossum">
+  <div class="pimg"><img src="assets/img/products/ossum.webp" alt="Jaquar Ossum" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>Ossum</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Ossum." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="outdoor strip light ip65">
+  <div class="pimg"><img src="assets/img/products/outdoor-strip-light-ip65.webp" alt="Jaquar Outdoor Strip Light IP65" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>Outdoor Strip Light IP65</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Outdoor%20Strip%20Light%20IP65." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="rigel">
+  <div class="pimg"><img src="assets/img/products/rigel.webp" alt="Jaquar Rigel" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>Rigel</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Rigel." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="rope light">
+  <div class="pimg"><img src="assets/img/products/rope-light.webp" alt="Jaquar Rope Light" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>Rope Light</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Rope%20Light." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="facade" data-name="serenea flex light">
+  <div class="pimg"><img src="assets/img/products/serenea-flex-lights.webp" alt="Jaquar Serenea Flex Light" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Facade &amp; linear</span><h3>Serenea Flex Light</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Serenea%20Flex%20Light." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="alfie">
+  <div class="pimg"><img src="assets/img/products/alfie.webp" alt="Jaquar Alfie" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Alfie</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Alfie." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="capella">
+  <div class="pimg"><img src="assets/img/products/capella.webp" alt="Jaquar Capella" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Capella</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Capella." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="carina">
+  <div class="pimg"><img src="assets/img/products/carina.webp" alt="Jaquar Carina" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Carina</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Carina." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="castor">
+  <div class="pimg"><img src="assets/img/products/castor.webp" alt="Jaquar Castor" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Castor</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Castor." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="cone bollard">
+  <div class="pimg"><img src="assets/img/products/cone-bollard.webp" alt="Jaquar Cone Bollard" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Cone Bollard</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Cone%20Bollard." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="cooper">
+  <div class="pimg"><img src="assets/img/products/cooper.webp" alt="Jaquar Cooper" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Cooper</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Cooper." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="cylinder bollard">
+  <div class="pimg"><img src="assets/img/products/cylinder-bollard.webp" alt="Jaquar Cylinder Bollard" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Cylinder Bollard</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Cylinder%20Bollard." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="disc bollard">
+  <div class="pimg"><img src="assets/img/products/disc-bollard.webp" alt="Jaquar Disc Bollard" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Disc Bollard</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Disc%20Bollard." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="electra">
+  <div class="pimg"><img src="assets/img/products/electra.webp" alt="Jaquar Electra" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Electra</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Electra." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="elumx">
+  <div class="pimg"><img src="assets/img/products/elumx.webp" alt="Jaquar Elumx" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Elumx</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Elumx." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="foot light">
+  <div class="pimg"><img src="assets/img/products/foot-light.webp" alt="Jaquar Foot Light" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Foot Light</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Foot%20Light." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="hydrus">
+  <div class="pimg"><img src="assets/img/products/hydrus.webp" alt="Jaquar Hydrus" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Hydrus</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Hydrus." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="ikon">
+  <div class="pimg"><img src="assets/img/products/ikon.webp" alt="Jaquar Ikon" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Ikon</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Ikon." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="illumine">
+  <div class="pimg"><img src="assets/img/products/illumine.webp" alt="Jaquar Illumine" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Illumine</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Illumine." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="kira">
+  <div class="pimg"><img src="assets/img/products/kira.webp" alt="Jaquar Kira" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Kira</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Kira." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="lima">
+  <div class="pimg"><img src="assets/img/products/lima.webp" alt="Jaquar Lima" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Lima</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Lima." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="luminz">
+  <div class="pimg"><img src="assets/img/products/luminz.webp" alt="Jaquar Luminz" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Luminz</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Luminz." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="lupus">
+  <div class="pimg"><img src="assets/img/products/lupus.webp" alt="Jaquar Lupus" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Lupus</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Lupus." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="miram">
+  <div class="pimg"><img src="assets/img/products/miram.webp" alt="Jaquar Miram" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Miram</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Miram." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="mushroom bollard">
+  <div class="pimg"><img src="assets/img/products/mushroom.webp" alt="Jaquar Mushroom Bollard" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Mushroom Bollard</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Mushroom%20Bollard." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="mushroom t bollard">
+  <div class="pimg"><img src="assets/img/products/mushroom-t.webp" alt="Jaquar Mushroom T Bollard" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Mushroom T Bollard</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Mushroom%20T%20Bollard." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="octan">
+  <div class="pimg"><img src="assets/img/products/octan.webp" alt="Jaquar Octan" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Octan</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Octan." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="orbarix">
+  <div class="pimg"><img src="assets/img/products/orbarix.webp" alt="Jaquar Orbarix" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Orbarix</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Orbarix." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="polaris">
+  <div class="pimg"><img src="assets/img/products/polaris.webp" alt="Jaquar Polaris" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Polaris</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Polaris." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="preston">
+  <div class="pimg"><img src="assets/img/products/preston.webp" alt="Jaquar Preston" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Preston</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Preston." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="robo light">
+  <div class="pimg"><img src="assets/img/products/robo-light.webp" alt="Jaquar Robo Light" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Robo Light</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Robo%20Light." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="sparklz">
+  <div class="pimg"><img src="assets/img/products/sparklz.webp" alt="Jaquar Sparklz" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Sparklz</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Sparklz." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="splash">
+  <div class="pimg"><img src="assets/img/products/splash.webp" alt="Jaquar Splash" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Splash</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Splash." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="square">
+  <div class="pimg"><img src="assets/img/products/square.webp" alt="Jaquar Square" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Square</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Square." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="visio">
+  <div class="pimg"><img src="assets/img/products/visio.webp" alt="Jaquar Visio" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Visio</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Visio." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="landscape" data-name="xcellent">
+  <div class="pimg"><img src="assets/img/products/xcellent.webp" alt="Jaquar Xcellent" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Landscape &amp; outdoor wall</span><h3>Xcellent</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Xcellent." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="aurora">
+  <div class="pimg"><img src="assets/img/products/aurora.webp" alt="Jaquar Aurora" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Aurora</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Aurora." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="avior">
+  <div class="pimg"><img src="assets/img/products/avior.webp" alt="Jaquar Avior" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Avior</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Avior." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="avoir">
+  <div class="pimg"><img src="assets/img/products/avoir.webp" alt="Jaquar Avoir" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Avoir</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Avoir." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="brilliance">
+  <div class="pimg"><img src="assets/img/products/brilliance.webp" alt="Jaquar Brilliance" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Brilliance</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Brilliance." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="eralod">
+  <div class="pimg"><img src="assets/img/products/eralod.webp" alt="Jaquar Eralod" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Eralod</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Eralod." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="irena">
+  <div class="pimg"><img src="assets/img/products/irena.webp" alt="Jaquar Irena" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Irena</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Irena." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="lantern">
+  <div class="pimg"><img src="assets/img/products/lantern.webp" alt="Jaquar Lantern" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Lantern</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Lantern." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="lex">
+  <div class="pimg"><img src="assets/img/products/lex.webp" alt="Jaquar Lex" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Lex</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Lex." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="lumina">
+  <div class="pimg"><img src="assets/img/products/lumina.webp" alt="Jaquar Lumina" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Lumina</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Lumina." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="luminosity">
+  <div class="pimg"><img src="assets/img/products/luminosity.webp" alt="Jaquar Luminosity" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Luminosity</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Luminosity." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="mapple">
+  <div class="pimg"><img src="assets/img/products/mapple.webp" alt="Jaquar Mapple" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Mapple</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Mapple." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="marrow">
+  <div class="pimg"><img src="assets/img/products/marrow.webp" alt="Jaquar Marrow" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Marrow</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Marrow." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="navis">
+  <div class="pimg"><img src="assets/img/products/navis.webp" alt="Jaquar Navis" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Navis</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Navis." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="oak ovation">
+  <div class="pimg"><img src="assets/img/products/oak-ovation.webp" alt="Jaquar Oak Ovation" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Oak Ovation</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Oak%20Ovation." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="polestar">
+  <div class="pimg"><img src="assets/img/products/polestar.webp" alt="Jaquar Polestar" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Polestar</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Polestar." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="purais">
+  <div class="pimg"><img src="assets/img/products/purais.webp" alt="Jaquar Purais" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Purais</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Purais." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="radiara">
+  <div class="pimg"><img src="assets/img/products/radiara.webp" alt="Jaquar Radiara" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Radiara</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Radiara." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="reneva">
+  <div class="pimg"><img src="assets/img/products/reneva.webp" alt="Jaquar Reneva" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Reneva</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Reneva." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="ring post top">
+  <div class="pimg"><img src="assets/img/products/ring-post-top.webp" alt="Jaquar Ring Post Top" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Ring Post Top</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Ring%20Post%20Top." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="safia">
+  <div class="pimg"><img src="assets/img/products/safia.webp" alt="Jaquar Safia" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Safia</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Safia." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="sentinel">
+  <div class="pimg"><img src="assets/img/products/sentinel.webp" alt="Jaquar Sentinel" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Sentinel</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Sentinel." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="sentry">
+  <div class="pimg"><img src="assets/img/products/sentry.webp" alt="Jaquar Sentry" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Sentry</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Sentry." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="slender">
+  <div class="pimg"><img src="assets/img/products/slender.webp" alt="Jaquar Slender" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Slender</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Slender." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="turais">
+  <div class="pimg"><img src="assets/img/products/turais.webp" alt="Jaquar Turais" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Turais</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Turais." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="vimio">
+  <div class="pimg"><img src="assets/img/products/vimio.webp" alt="Jaquar Vimio" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Vimio</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Vimio." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="woody">
+  <div class="pimg"><img src="assets/img/products/woody.webp" alt="Jaquar Woody" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Woody</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Woody." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="posttop" data-name="zenith">
+  <div class="pimg"><img src="assets/img/products/zenith.webp" alt="Jaquar Zenith" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Post-tops &amp; heritage</span><h3>Zenith</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Zenith." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="areva prime">
+  <div class="pimg"><img src="assets/img/products/areva-prime.webp" alt="Jaquar Areva Prime" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Areva Prime</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Areva%20Prime." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="cyno">
+  <div class="pimg"><img src="assets/img/products/cyno.webp" alt="Jaquar Cyno" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Cyno</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Cyno." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="emina">
+  <div class="pimg"><img src="assets/img/products/emina.webp" alt="Jaquar Emina" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Emina</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Emina." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="emina tiltable">
+  <div class="pimg"><img src="assets/img/products/emina-tiltable.webp" alt="Jaquar Emina Tiltable" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Emina Tiltable</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Emina%20Tiltable." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="empha">
+  <div class="pimg"><img src="assets/img/products/empha.webp" alt="Jaquar Empha" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Empha</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Empha." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="ensave plus">
+  <div class="pimg"><img src="assets/img/products/ensave-plus.webp" alt="Jaquar Ensave Plus" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Ensave Plus</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Ensave%20Plus." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="epito">
+  <div class="pimg"><img src="assets/img/products/epito.webp" alt="Jaquar Epito" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Epito</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Epito." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="eris (low border deep recess)">
+  <div class="pimg"><img src="assets/img/products/eris-low-border-deep-recess.webp" alt="Jaquar Eris (Low border deep recess)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Eris (Low border deep recess)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Eris%20%28Low%20border%20deep%20recess%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="eris fixed">
+  <div class="pimg"><img src="assets/img/products/eris-fixed.webp" alt="Jaquar Eris Fixed" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Eris Fixed</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Eris%20Fixed." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="eris reflecto">
+  <div class="pimg"><img src="assets/img/products/eris-reflecto.webp" alt="Jaquar Eris Reflecto" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Eris Reflecto</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Eris%20Reflecto." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="eris surface round">
+  <div class="pimg"><img src="assets/img/products/eris-surface-round.webp" alt="Jaquar Eris Surface Round" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Eris Surface Round</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Eris%20Surface%20Round." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="eris swivel (round)">
+  <div class="pimg"><img src="assets/img/products/eris-swivel-round.webp" alt="Jaquar Eris Swivel (Round)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Eris Swivel (Round)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Eris%20Swivel%20%28Round%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="estus swivel (round)">
+  <div class="pimg"><img src="assets/img/products/estus-swivel-round.webp" alt="Jaquar Estus Swivel (Round)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Estus Swivel (Round)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Estus%20Swivel%20%28Round%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="instaray round slim">
+  <div class="pimg"><img src="assets/img/products/instaray-round-slim.webp" alt="Jaquar Instaray Round Slim" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Instaray Round Slim</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Instaray%20Round%20Slim." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="instaray slim linear">
+  <div class="pimg"><img src="assets/img/products/instaray-slim-linear.webp" alt="Jaquar Instaray Slim Linear" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Instaray Slim Linear</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Instaray%20Slim%20Linear." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="instaray slim linear diffused">
+  <div class="pimg"><img src="assets/img/products/instaray-slim-linear-diffused.webp" alt="Jaquar Instaray Slim Linear Diffused" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Instaray Slim Linear Diffused</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Instaray%20Slim%20Linear%20Diffused." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="instaray slim linear- with lens">
+  <div class="pimg"><img src="assets/img/products/instaray-slim-linear-with-lens.webp" alt="Jaquar Instaray Slim Linear- with Lens" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Instaray Slim Linear- with Lens</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Instaray%20Slim%20Linear-%20with%20Lens." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="instaray slim tiltable &amp; diffused">
+  <div class="pimg"><img src="assets/img/products/instaray-slim-tiltable-diffused.webp" alt="Jaquar Instaray Slim Tiltable &amp; diffused" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Instaray Slim Tiltable &amp; diffused</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Instaray%20Slim%20Tiltable%20%26%20diffused." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="kubik ultra">
+  <div class="pimg"><img src="assets/img/products/kubik-ultra.webp" alt="Jaquar Kubik Ultra" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Kubik Ultra</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Kubik%20Ultra." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="kubik ultra hd">
+  <div class="pimg"><img src="assets/img/products/kubik-ultra-hd.webp" alt="Jaquar Kubik Ultra HD" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Kubik Ultra HD</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Kubik%20Ultra%20HD." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="lucent">
+  <div class="pimg"><img src="assets/img/products/lucent.webp" alt="Jaquar Lucent" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Lucent</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Lucent." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="multiple zoom light">
+  <div class="pimg"><img src="assets/img/products/multiple-zoom-light.webp" alt="Jaquar Multiple Zoom Light" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Multiple Zoom Light</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Multiple%20Zoom%20Light." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="nero surface (round)">
+  <div class="pimg"><img src="assets/img/products/nero-surface-round.webp" alt="Jaquar Nero Surface (Round)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Nero Surface (Round)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Nero%20Surface%20%28Round%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="nero surface (square)">
+  <div class="pimg"><img src="assets/img/products/nero-surface-square.webp" alt="Jaquar Nero Surface (Square)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Nero Surface (Square)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Nero%20Surface%20%28Square%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="orelli slim">
+  <div class="pimg"><img src="assets/img/products/orelli-slim.webp" alt="Jaquar Orelli Slim" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Orelli Slim</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Orelli%20Slim." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="orelli slim hanging">
+  <div class="pimg"><img src="assets/img/products/orelli-slim-hanging.webp" alt="Jaquar Orelli Slim Hanging" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Orelli Slim Hanging</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Orelli%20Slim%20Hanging." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="rene">
+  <div class="pimg"><img src="assets/img/products/rene.webp" alt="Jaquar Rene" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Rene</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Rene." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="t8 retro tube">
+  <div class="pimg"><img src="assets/img/products/t8-retro-tube.webp" alt="Jaquar T8 Retro Tube" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>T8 Retro Tube</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20T8%20Retro%20Tube." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="track light">
+  <div class="pimg"><img src="assets/img/products/track-light.webp" alt="Jaquar Track Light" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Track Light</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Track%20Light." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="ultima multi-colour (2&#x27;x2&#x27;)">
+  <div class="pimg"><img src="assets/img/products/ultima-multi-colour-2-x2.webp" alt="Jaquar Ultima Multi-colour (2&#x27;x2&#x27;)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Ultima Multi-colour (2&#x27;x2&#x27;)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Ultima%20Multi-colour%20%282%27x2%27%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="ultima slim (1&#x27;x1&#x27;)">
+  <div class="pimg"><img src="assets/img/products/ultima-slim-1-x1.webp" alt="Jaquar Ultima Slim (1&#x27;x1&#x27;)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Ultima Slim (1&#x27;x1&#x27;)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Ultima%20Slim%20%281%27x1%27%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="ultima slim (2&#x27;x2&#x27;)">
+  <div class="pimg"><img src="assets/img/products/ultima-slim-2-x2.webp" alt="Jaquar Ultima Slim (2&#x27;x2&#x27;)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Ultima Slim (2&#x27;x2&#x27;)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Ultima%20Slim%20%282%27x2%27%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="ultima ultra pro (2&#x27;x2&#x27;)">
+  <div class="pimg"><img src="assets/img/products/ultima-ultra-pro-2-x2.webp" alt="Jaquar Ultima Ultra Pro (2&#x27;x2&#x27;)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Ultima Ultra Pro (2&#x27;x2&#x27;)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Ultima%20Ultra%20Pro%20%282%27x2%27%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="ultima ultra slim (1&#x27;x4&#x27;)">
+  <div class="pimg"><img src="assets/img/products/ultima-ultra-slim-1-x4.webp" alt="Jaquar Ultima Ultra Slim (1&#x27;x4&#x27;)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Ultima Ultra Slim (1&#x27;x4&#x27;)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Ultima%20Ultra%20Slim%20%281%27x4%27%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="indoor" data-name="zoom light">
+  <div class="pimg"><img src="assets/img/products/zoom-light.webp" alt="Jaquar Zoom Light" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Commercial indoor</span><h3>Zoom Light</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Zoom%20Light." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="gem blaze">
+  <div class="pimg"><img src="assets/img/products/gem-blaze.webp" alt="Jaquar Gem Blaze" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Gem Blaze</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Gem%20Blaze." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="gem star">
+  <div class="pimg"><img src="assets/img/products/gem-star.webp" alt="Jaquar Gem Star" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Gem Star</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Gem%20Star." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="gem surface">
+  <div class="pimg"><img src="assets/img/products/gem-surface.webp" alt="Jaquar Gem Surface" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Gem Surface</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Gem%20Surface." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="illuminator">
+  <div class="pimg"><img src="assets/img/products/illuminator.webp" alt="Jaquar Illuminator" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Illuminator</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Illuminator." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="jasper prime">
+  <div class="pimg"><img src="assets/img/products/jasper-prime.webp" alt="Jaquar Jasper Prime" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Jasper Prime</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Jasper%20Prime." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="kriza emergency bulb">
+  <div class="pimg"><img src="assets/img/products/kriza-emergency-bulb.webp" alt="Jaquar Kriza Emergency Bulb" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Kriza Emergency Bulb</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Kriza%20Emergency%20Bulb." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="kriza emergency downlight">
+  <div class="pimg"><img src="assets/img/products/kriza-emergency-downlight.webp" alt="Jaquar Kriza Emergency Downlight" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Kriza Emergency Downlight</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Kriza%20Emergency%20Downlight." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="night lamps (0.5 w)">
+  <div class="pimg"><img src="assets/img/products/night-lamps-0-5-w.webp" alt="Jaquar Night Lamps (0.5 W)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Night Lamps (0.5 W)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Night%20Lamps%20%280.5%20W%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="pearl plus">
+  <div class="pimg"><img src="assets/img/products/pearl-plus.webp" alt="Jaquar Pearl Plus" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Pearl Plus</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Pearl%20Plus." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="prima hd">
+  <div class="pimg"><img src="assets/img/products/prima-hd.webp" alt="Jaquar Prima HD" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Prima HD</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Prima%20HD." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="strella hd">
+  <div class="pimg"><img src="assets/img/products/strella-hd.webp" alt="Jaquar Strella HD" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Strella HD</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Strella%20HD." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="striker">
+  <div class="pimg"><img src="assets/img/products/striker.webp" alt="Jaquar Striker" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Striker</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Striker." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="home" data-name="volga prime smart">
+  <div class="pimg"><img src="assets/img/products/volga-prime-smart.webp" alt="Jaquar Volga Prime Smart" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Home</span><h3>Volga Prime Smart</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Volga%20Prime%20Smart." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="hanging wire for surface mounted magnetic track">
+  <div class="pimg"><img src="assets/img/products/hanging-wire-for-surface-mounted-magnetic-track.webp" alt="Jaquar Hanging wire for surface mounted magnetic track" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Hanging wire for surface mounted magnetic track</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Hanging%20wire%20for%20surface%20mounted%20magnetic%20track." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="junction box jbx1">
+  <div class="pimg"><img src="assets/img/products/sac-wht-jbx1.webp" alt="Jaquar Junction Box JBX1" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Junction Box JBX1</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Junction%20Box%20JBX1." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="led indoor strip slim driver">
+  <div class="pimg"><img src="assets/img/products/led-indoor-strip-slim-driver.webp" alt="Jaquar LED Indoor Strip Slim Driver" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>LED Indoor Strip Slim Driver</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20LED%20Indoor%20Strip%20Slim%20Driver." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="led outdoor strip slim driver (ip67)">
+  <div class="pimg"><img src="assets/img/products/led-outdoor-strip-slim-driver-ip67.webp" alt="Jaquar LED Outdoor Strip Slim Driver (IP67)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>LED Outdoor Strip Slim Driver (IP67)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20LED%20Outdoor%20Strip%20Slim%20Driver%20%28IP67%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track bendable input line connector">
+  <div class="pimg"><img src="assets/img/products/magnetic-track-bendable-input-line-connector.webp" alt="Jaquar Magnetic track bendable input line connector" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic track bendable input line connector</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20track%20bendable%20input%20line%20connector." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track bendable loop in jointer">
+  <div class="pimg"><img src="assets/img/products/magnetic-track-bendable-loop-in-jointer.webp" alt="Jaquar Magnetic track bendable loop in jointer" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic track bendable loop in jointer</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20track%20bendable%20loop%20in%20jointer." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track channel fixed jointer">
+  <div class="pimg"><img src="assets/img/products/magnetic-track-channel-fixed-jointer.webp" alt="Jaquar Magnetic track channel fixed jointer" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic track channel fixed jointer</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20track%20channel%20fixed%20jointer." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track connector l shape horizontal recess mounted">
+  <div class="pimg"><img src="assets/img/products/magnetic-track-connector-l-shape-horizontal-recess-mounted.webp" alt="Jaquar Magnetic track connector L shape horizontal recess mounted" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic track connector L shape horizontal recess mounted</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20track%20connector%20L%20shape%20horizontal%20recess%20mounted." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track connector l shape horizontal surface mounted">
+  <div class="pimg"><img src="assets/img/products/magnetic-track-connector-l-shape-horizontal-surface-mounted.webp" alt="Jaquar Magnetic track connector L shape horizontal surface mounted" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic track connector L shape horizontal surface mounted</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20track%20connector%20L%20shape%20horizontal%20surface%20mounted." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track connector l shape vertical recess mounted">
+  <div class="pimg"><img src="assets/img/products/magnetic-track-connector-l-shape-vertical-recess-mounted.webp" alt="Jaquar Magnetic track connector L shape vertical recess mounted" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic track connector L shape vertical recess mounted</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20track%20connector%20L%20shape%20vertical%20recess%20mounted." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track connector l shape vertical surface mounted">
+  <div class="pimg"><img src="assets/img/products/magnetic-track-connector-l-shape-vertical-surface-mounted.webp" alt="Jaquar Magnetic track connector L shape vertical surface mounted" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic track connector L shape vertical surface mounted</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20track%20connector%20L%20shape%20vertical%20surface%20mounted." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track driver 48v 100w">
+  <div class="pimg"><img src="assets/img/products/led-magnetic-track-driver-48-v-100-w.webp" alt="Jaquar Magnetic Track Driver 48V 100W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic Track Driver 48V 100W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20Track%20Driver%2048V%20100W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track driver 48v 200w">
+  <div class="pimg"><img src="assets/img/products/led-magnetic-track-driver-48-v-200-w.webp" alt="Jaquar Magnetic Track Driver 48V 200W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic Track Driver 48V 200W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20Track%20Driver%2048V%20200W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track driver 48v 30w">
+  <div class="pimg"><img src="assets/img/products/led-magnetic-track-driver-48-v-30-w.webp" alt="Jaquar Magnetic Track Driver 48V 30W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic Track Driver 48V 30W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20Track%20Driver%2048V%2030W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track driver 48v 50w">
+  <div class="pimg"><img src="assets/img/products/led-magnetic-track-driver-48-v-50-w.webp" alt="Jaquar Magnetic Track Driver 48V 50W" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic Track Driver 48V 50W</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20Track%20Driver%2048V%2050W." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track i shape connector">
+  <div class="pimg"><img src="assets/img/products/magnetic-track-i-shape-connector.webp" alt="Jaquar Magnetic track I shape connector" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic track I shape connector</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20track%20I%20shape%20connector." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track slim 1-2 meter recess mounted">
+  <div class="pimg"><img src="assets/img/products/magnetic-track-slim-1-2-meter-recess-mounted.webp" alt="Jaquar Magnetic track slim 1-2 meter recess mounted" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic track slim 1-2 meter recess mounted</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20track%20slim%201-2%20meter%20recess%20mounted." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="magnetic track slim 1-2 meter surface -hanging mounted">
+  <div class="pimg"><img src="assets/img/products/magnetic-track-slim-1-2-meter-surface-hanging-mounted.webp" alt="Jaquar Magnetic track slim 1-2 meter surface -hanging mounted" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Magnetic track slim 1-2 meter surface -hanging mounted</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Magnetic%20track%20slim%201-2%20meter%20surface%20-hanging%20mounted." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="microwave sensor">
+  <div class="pimg"><img src="assets/img/products/microwave-sensor.webp" alt="Jaquar Microwave Sensor" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Microwave Sensor</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Microwave%20Sensor." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="power supply for indoor strip light (ip20)">
+  <div class="pimg"><img src="assets/img/products/power-supply-for-indoor-strip-light-ip20.webp" alt="Jaquar Power Supply for Indoor Strip Light (IP20)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Power Supply for Indoor Strip Light (IP20)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Power%20Supply%20for%20Indoor%20Strip%20Light%20%28IP20%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="power supply for outdoor strip light (ip65)">
+  <div class="pimg"><img src="assets/img/products/power-supply-for-outdoor-strip-light-ip65.webp" alt="Jaquar Power Supply for Outdoor Strip Light (IP65)" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Power Supply for Outdoor Strip Light (IP65)</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Power%20Supply%20for%20Outdoor%20Strip%20Light%20%28IP65%29." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="strella accessories">
+  <div class="pimg"><img src="assets/img/products/strella-accessories.webp" alt="Jaquar Strella Accessories" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Strella Accessories</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Strella%20Accessories." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="strip driver">
+  <div class="pimg"><img src="assets/img/products/strip-driver.webp" alt="Jaquar Strip Driver" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>Strip Driver</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20Strip%20Driver." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+<article class="pcard" data-cat="accessories" data-name="t8 retro accessories">
+  <div class="pimg"><img src="assets/img/products/t8-retro-accessories.webp" alt="Jaquar T8 Retro Accessories" loading="lazy" width="440" height="440"></div>
+  <div class="pbody"><span class="pcat">Drivers &amp; accessories</span><h3>T8 Retro Accessories</h3><a href="https://wa.me/918200461631?text=Hello%20Kivasa%2C%20I%27d%20like%20a%20price%20for%20the%20Jaquar%20T8%20Retro%20Accessories." target="_blank" rel="noopener">Ask for price →</a></div>
+</article>
+    </div>
+    <p class="empty" id="product-empty" hidden>No products match that search. Try another name, or <a href="contact.html">send us your requirement</a> and we'll find it.</p>
+    <div class="partner"><img src="assets/img/brand/jaquar-green.webp" alt="Jaquar Lighting" width="107" height="38"><span><b>Can't see what you need?</b> Send us your BOQ or specification and we'll match it from the full Jaquar range.</span><a href="contact.html">Send a requirement →</a></div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="about">
+      <a class="brand" href="index.html"><img src="assets/img/brand/k-mark.webp" alt="" width="34" height="33"><span><b>KIVASA</b><small>GLOBALTECH</small></span></a>
+      <p>Lighting the backbone of infrastructure. Lighting and electrical solutions for Railways, commercial, industrial and residential projects.</p>
+    </div>
+    <div><h4>Sectors</h4><ul>
+      <li><a href="services.html#railway">Railway stations</a></li>
+      <li><a href="services.html#lighting">Facade &amp; bulk lighting</a></li>
+      <li><a href="services.html#electrical">Electrical utilities</a></li>
+      <li><a href="services.html#sourcing">Global sourcing</a></li>
+    </ul></div>
+    <div><h4>Company</h4><ul>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div><h4>Contact</h4><ul>
+      <li><a href="tel:+918200461631">+91 82004 61631</a></li>
+      <li><a href="mailto:info@kivasaglobaltech.com">info@kivasaglobaltech.com</a></li>
+      <li>Mon–Sat, 9:00 AM – 6:00 PM</li>
+    </ul></div>
+    <div class="legal"><span>© 2026 Kivasa Globaltech Pvt Ltd. All rights reserved.</span><span>Jaquar Lighting partner</span></div>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/918200461631" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg><span>WhatsApp</span></a>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
