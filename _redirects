@@ -1,0 +1,13 @@
+# Clean URL 301 Redirects
+/jaquar-products /products 301
+/jaquar-products.html /products 301
+/product-catalog /products 301
+/product-catalog.html /products 301
+/index.html / 301
+/about.html /about 301
+/services.html /services 301
+/projects.html /projects 301
+/products.html /products 301
+/contact.html /contact 301
+/privacy-policy.html /privacy-policy 301
+/terms.html /terms 301

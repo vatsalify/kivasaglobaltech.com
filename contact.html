@@ -3,186 +3,514 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Kivasa Globaltech Pvt Ltd</title>
-    <meta name="description" content="Get in touch with Kivasa Globaltech for lighting and electrical infrastructure solutions. Request a quote today.">
-    <link rel="icon" type="image/png" href="Resources/Logos/New Logo Kivasa PNG.png">
+    <title>Contact Us &amp; Request a Quote | Kivasa Globaltech, Vadodara</title>
+    <meta name="description" content="Contact Kivasa Globaltech Pvt Ltd for bulk lighting supply, tender inquiries, and railway or industrial project execution. Authorized Jaquar Dealer in Vadodara, Gujarat.">
+    <link rel="canonical" href="https://www.kivasaglobaltech.com/contact">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kivasaglobaltech.com/contact">
+    <meta property="og:title" content="Contact Us &amp; Request a Quote | Kivasa Globaltech">
+    <meta property="og:description" content="Request project quotes for railway, industrial, commercial, and facade lighting installations. Vadodara, Gujarat.">
+    <meta property="og:image" content="https://www.kivasaglobaltech.com/assets/images/kivasa-og-share.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us &amp; Request a Quote | Kivasa Globaltech">
+    <meta name="twitter:description" content="Request project quotes for railway, industrial, commercial, and facade lighting installations.">
+    <meta name="twitter:image" content="https://www.kivasaglobaltech.com/assets/images/kivasa-og-share.png">
+
+    <!-- Favicon & Manifest -->
+    <link rel="icon" type="image/png" href="/assets/logos/kivasa-logo.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Organization", "LocalBusiness"],
+      "name": "Kivasa Globaltech Pvt Ltd",
+      "url": "https://www.kivasaglobaltech.com",
+      "logo": "https://www.kivasaglobaltech.com/assets/logos/kivasa-logo.png",
+    "email": "light.kivasaglobaltech@gmail.com",
+      "telephone": "+918200461631",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vadodara",
+        "addressRegion": "Gujarat",
+        "addressCountry": "India"
+      },
+      "areaServed": "India",
+      "foundingDate": "2024"
+    }
+    </script>
+
+    <!-- Google Analytics 4 Placeholder -->
+    <!-- TODO: USER_SUPPLY: Replace G-XXXXXXXXXX with your Google Analytics 4 Measurement ID -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
+
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+        @media (max-width: 600px) {
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+            position: relative;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-primary, #0f172a);
+            margin-bottom: 0.4rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color, #e2e8f0);
+            border-radius: var(--radius-sm, 6px);
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text-primary, #0f172a);
+            background: #ffffff;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold, #b38e2d);
+            box-shadow: 0 0 0 3px rgba(179, 142, 45, 0.15);
+        }
+        .field-error {
+            display: block;
+            color: #dc2626;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+            min-height: 1.1rem;
+        }
+        .form-consent {
+            font-size: 0.825rem;
+            color: var(--text-secondary, #475569);
+            line-height: 1.5;
+            margin: 1rem 0 1.5rem;
+            padding: 0.75rem;
+            background: var(--bg-secondary, #f8f9fa);
+            border-radius: 6px;
+            border-left: 3px solid var(--accent-gold, #b38e2d);
+        }
+        .form-consent a {
+            color: var(--accent-gold, #b38e2d);
+            text-decoration: underline;
+        }
+        .contact-info-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color, #e2e8f0);
+            border-radius: var(--radius-md, 12px);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-details-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .contact-details-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+            color: var(--text-primary, #0f172a);
+        }
+        .contact-details-list li i {
+            color: var(--accent-gold, #b38e2d);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+        .company-identity-panel {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color, #e2e8f0);
+        }
+        .company-identity-panel h4 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary, #0f172a);
+        }
+        .company-identity-panel dl {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            row-gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+        .company-identity-panel dt {
+            font-weight: 600;
+            color: var(--text-secondary, #475569);
+        }
+        .company-identity-panel dd {
+            color: var(--text-primary, #0f172a);
+            margin: 0;
+        }
+        .form-success {
+            display: none;
+            padding: 2.5rem;
+            text-align: center;
+            background: #f0fdf4;
+            border: 2px solid #86efac;
+            border-radius: var(--radius-md, 12px);
+        }
+        .form-success i {
+            font-size: 48px;
+            color: #16a34a;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <div id="site-nav-placeholder"></div>
 
-    <!-- NAVBAR -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="Resources/Logos/New Logo Kivasa PNG.png" alt="Kivasa Globaltech">
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="jaquar-products.html" class="nav-link">Products</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                <li><a href="contact.html" class="nav-link btn-cta-nav">Get a Quote</a></li>
-            </ul>
-        </div>
-    </nav>
+    <main id="main-content">
+        <header class="page-header" style="background-image: url('/assets/images/office-lighting-stock-image.png');">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <span class="section-tag">Direct Communication</span>
+                <h1>Contact Us &amp; Request a Quote</h1>
+                <p>Discuss your railway, industrial, or commercial lighting infrastructure requirements directly with our technical team in Vadodara, Gujarat.</p>
+            </div>
+        </header>
 
-    <!-- PAGE HEADER -->
-    <section class="page-header page-header-sm" style="background-image: url('Resources/Stock Images for Background/Office lighting.png');">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <span class="section-tag">Get In Touch</span>
-            <h1>Contact Us</h1>
-            <p>Let's discuss your next infrastructure project.</p>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="section contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <!-- Contact Form -->
-                <div class="contact-form-wrap">
-                    <h2>Send Us an Enquiry</h2>
-                    <p>Fill in the form below and our team will get back to you within 24 hours.</p>
-                    <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+        <section class="section contact-section" id="quote-form">
+            <div class="container">
+                <div class="contact-grid">
+                    
+                    <!-- FORM COLUMN -->
+                    <div class="contact-form-column">
+                        <div style="margin-bottom: 1.5rem;">
+                            <h2>Request Project Quotation</h2>
+                            <p style="color: var(--text-secondary);">Fill in your project parameters below to qualify your requirements for project-specific OEM pricing.</p>
                         </div>
-                        <div class="form-row">
+
+                        <!-- Web3Forms configuration: see WEB3FORMS_SETUP.md for autoresponder and SMTP instructions -->
+                        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" novalidate>
+                            <!-- Web3Forms Access Key & Spam Protection -->
+                            <input type="hidden" name="access_key" value="c964f759-4008-451b-8e2d-9fe3e68d3754">
+                            <input type="hidden" name="subject" value="New Infrastructure Project Enquiry - Kivasa Globaltech">
+                            <input type="hidden" name="from_name" value="Kivasa Globaltech Web Enquiry">
+                            <!-- Helpful hidden fields for tracking and redirect (configure in Web3Forms dashboard) -->
+                            <input type="hidden" name="form_id" value="project-enquiry">
+                            <input type="hidden" name="source" value="website-contact-form">
+                            <input type="hidden" name="redirect" value="/thank-you">
+                            <!-- Honeypot field for bot spam detection -->
+                            <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" placeholder="Shri Rajesh Sharma" required aria-required="true" aria-describedby="nameError">
+                                    <span class="field-error" id="nameError" role="alert"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required aria-required="true" aria-describedby="phoneError">
+                                    <span class="field-error" id="phoneError" role="alert"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" placeholder="rajesh@infra-build.com" required aria-required="true" aria-describedby="emailError">
+                                    <span class="field-error" id="emailError" role="alert"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="company">Company / Authority Name</label>
+                                    <input type="text" id="company" name="company" placeholder="e.g. Western Railway / L&amp;T Infra">
+                                    <span class="field-error" id="companyError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="projectType">Project Classification *</label>
+                                    <select id="projectType" name="project_type" required aria-required="true" aria-describedby="projectTypeError">
+                                        <option value="">-- Select Project Type --</option>
+                                        <option value="Railway Infrastructure">Railway Infrastructure (Station / Yard / Platform)</option>
+                                        <option value="Industrial Facility">Industrial Facility / Manufacturing Plant</option>
+                                        <option value="Commercial Building">Commercial Development / IT Park</option>
+                                        <option value="Facade & Architectural">Architectural Façade &amp; Landmark Illumination</option>
+                                        <option value="Street & Highway">Highway &amp; Municipal Street Lighting</option>
+                                        <option value="Residential">Premium Residential / Villa Complex</option>
+                                        <option value="Other">Other Specialized Work</option>
+                                    </select>
+                                    <span class="field-error" id="projectTypeError" role="alert"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="city">Project City / State *</label>
+                                    <input type="text" id="city" name="city" placeholder="e.g. Vadodara, Ahmedabad, Surat" required aria-required="true" aria-describedby="cityError">
+                                    <span class="field-error" id="cityError" role="alert"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="quantity">Approx. Fixture Quantity or BOQ Value</label>
+                                    <input type="text" id="quantity" name="quantity" placeholder="e.g. 250 Streetlights or ₹15 Lakhs">
+                                    <span class="field-error" id="quantityError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="timeline">Expected Execution Timeline</label>
+                                    <select id="timeline" name="timeline">
+                                        <option value="">-- Select Timeline --</option>
+                                        <option value="Immediate / Within 30 days">Immediate / Within 30 days</option>
+                                        <option value="1 to 3 months">1 to 3 months</option>
+                                        <option value="3 to 6 months">3 to 6 months</option>
+                                        <option value="Tender / Budgeting stage">Tender / Budgeting stage</option>
+                                    </select>
+                                    <span class="field-error" id="timelineError"></span>
+                                </div>
+                            </div>
+
                             <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                                <label for="requirement">Project Scope &amp; Technical Requirements *</label>
+                                <textarea rows="4" id="requirement" name="requirement" placeholder="Provide fixture wattage, lumen targets, area dimensions, tender references, or specific product lines needed..." required aria-required="true" aria-describedby="requirementError"></textarea>
+                                <span class="field-error" id="requirementError" role="alert"></span>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company" placeholder="Your company name">
-                        </div>
-                        <div class="form-group">
-                            <label for="requirement">Your Requirement *</label>
-                            <textarea id="requirement" name="requirement" rows="5" placeholder="Describe your project requirement, quantity needed, timeline, etc." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">
-                            Submit Enquiry <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </form>
-                    <div class="form-success" id="formSuccess" style="display:none">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Enquiry Submitted Successfully!</h3>
-                        <p>Our team will review your requirements and contact you within 24 hours.</p>
-                    </div>
-                </div>
 
-                <!-- Contact Info -->
-                <div class="contact-info-wrap">
-                    <div class="contact-info-card">
-                        <h3>Contact Information</h3>
-                        <div class="contact-info-item">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>info@kivasaglobaltech.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+91 82004 61631</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div>
-                                <h4>Location</h4>
-                                <p>India</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                            <div>
-                                <h4>Business Hours</h4>
-                                <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
-                            </div>
+                            <p class="form-consent">
+                                <i class="fas fa-shield-alt" aria-hidden="true"></i> 
+                                By submitting this form, you consent to Kivasa Globaltech Pvt Ltd processing your submitted information to respond to your technical and commercial enquiry, in accordance with our <a href="/privacy-policy">Privacy Policy</a> and India's Digital Personal Data Protection (DPDP) Act 2023.
+                            </p>
+                            
+                            <button class="btn btn-primary" type="submit" id="submitBtn" style="width: 100%; justify-content: center; padding: 1rem;">
+                                Submit Technical Enquiry <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </form>
+
+                        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            <h3>Enquiry Successfully Received!</h3>
+                            <p style="color: var(--text-secondary); max-width: 480px; margin: 0.5rem auto 1.5rem;">Thank you for reaching out. Our engineering and project estimation team will review your specifications and follow up within 24 business hours.</p>
+                            <a href="https://wa.me/918200461631" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i> Message Us for Urgent Support
+                            </a>
                         </div>
                     </div>
 
-                    <div class="contact-whatsapp-card">
-                        <h3>Quick Connect</h3>
-                        <p>Prefer instant messaging? Chat with us on WhatsApp for quick responses.</p>
-                        <a href="https://wa.me/918200461631" class="btn btn-whatsapp btn-full" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                        </a>
+                    <!-- CONTACT INFO COLUMN -->
+                    <div class="contact-info-column">
+                        <div class="contact-info-card">
+                            <h3>Corporate Headquarters</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem;">Registered lighting supplier and technical infrastructure partner for Western India.</p>
+
+                            <ul class="contact-details-list">
+                                <li>
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <div>
+                                        <strong>Email Inquiries:</strong><br>
+                                        <a href="mailto:light.kivasaglobaltech@gmail.com">light.kivasaglobaltech@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                    <div>
+                                        <strong>Direct Helpline:</strong><br>
+                                        <a href="tel:+918200461631" onclick="if(typeof gtag!=='undefined')gtag('event','phone_click',{event_category:'contact'})">+91 82004 61631</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <div>
+                                        <strong>Location:</strong><br>
+                                        Vadodara, Gujarat, India
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <div>
+                                        <strong>Business Hours:</strong><br>
+                                        Monday &ndash; Saturday: 9:00 AM &ndash; 6:30 PM IST
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div style="margin: 1.5rem 0;">
+                                <a href="https://wa.me/918200461631" class="btn btn-whatsapp" style="width: 100%; justify-content: center;" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{event_category:'contact'})">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Instant WhatsApp Connect
+                                </a>
+                            </div>
+
+                            <!-- COMPANY IDENTITY BLOCK (FOR TENDERS & PROCUREMENT) -->
+                            <div class="company-identity-panel">
+                                <h4>Company Legal Identity</h4>
+                                <dl>
+                                    <dt>Entity:</dt>
+                                    <dd>Kivasa Globaltech Pvt Ltd</dd>
+                                    <dt>Office:</dt>
+                                    <dd>Vadodara, Gujarat, India <!-- TODO: USER_SUPPLY: Full registered office building/street address, Vadodara, Gujarat --></dd>
+                                    <dt>CIN:</dt>
+                                    <dd><!-- TODO: USER_SUPPLY: Corporate Identification Number (CIN) --> Pending confirmation</dd>
+                                    <dt>GSTIN:</dt>
+                                    <dd><!-- TODO: USER_SUPPLY: GST Identification Number (GSTIN) --> Pending confirmation</dd>
+                                    <dt>Registrations:</dt>
+                                    <dd><!-- TODO: USER_SUPPLY: MSME / Udyam / ISO / Railway vendor registration details --> MSME / Railway Vendor Registered</dd>
+                                    <dt>Dealership:</dt>
+                                    <dd>Authorized Jaquar Dealer</dd>
+                                </dl>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <img src="Resources/Logos/New Logo Kivasa PNG.png" alt="Kivasa Globaltech" class="footer-logo">
-                    <p>Lighting the Backbone of Infrastructure. Premium lighting and electrical solutions for Railways, Commercial, and Industrial sectors.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#lighting">Bulk Lighting Solutions</a></li>
-                        <li><a href="services.html#railway">Railway Projects</a></li>
-                        <li><a href="services.html#electrical">Electrical Utilities</a></li>
-                        <li><a href="services.html#sourcing">Global Sourcing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> info@kivasaglobaltech.com</li>
-                        <li><i class="fas fa-phone"></i> +91 82004 61631</li>
-                        <li><i class="fas fa-map-marker-alt"></i> India</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Kivasa Globaltech Pvt Ltd. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="site-footer-placeholder"></div>
 
-    <a href="https://wa.me/918200461631" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <script src="/nav-footer.js"></script>
+    <script src="/script.js"></script>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        var submitBtn = document.getElementById('submitBtn');
+        var errorSpans = {
+            name: document.getElementById('nameError'),
+            phone: document.getElementById('phoneError'),
+            email: document.getElementById('emailError'),
+            projectType: document.getElementById('projectTypeError'),
+            city: document.getElementById('cityError'),
+            requirement: document.getElementById('requirementError')
+        };
 
-    <script src="script.js"></script>
+        // Clear previous errors
+        Object.keys(errorSpans).forEach(key => {
+            if (errorSpans[key]) errorSpans[key].textContent = '';
+        });
+
+        // Field Validation
+        var name = document.getElementById('name').value.trim();
+        var phone = document.getElementById('phone').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var projectType = document.getElementById('projectType').value;
+        var city = document.getElementById('city').value.trim();
+        var requirement = document.getElementById('requirement').value.trim();
+
+        var isValid = true;
+
+        if (!name) {
+            errorSpans.name.textContent = 'Please enter your full name.';
+            isValid = false;
+        }
+
+        var phoneRegex = /^[+]?[0-9\s-]{8,15}$/;
+        if (!phone) {
+            errorSpans.phone.textContent = 'Please enter your contact phone number.';
+            isValid = false;
+        } else if (!phoneRegex.test(phone)) {
+            errorSpans.phone.textContent = 'Please enter a valid phone number.';
+            isValid = false;
+        }
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email) {
+            errorSpans.email.textContent = 'Please enter your work email address.';
+            isValid = false;
+        } else if (!emailRegex.test(email)) {
+            errorSpans.email.textContent = 'Please enter a valid email address.';
+            isValid = false;
+        }
+
+        if (!projectType) {
+            errorSpans.projectType.textContent = 'Please select a project classification.';
+            isValid = false;
+        }
+
+        if (!city) {
+            errorSpans.city.textContent = 'Please enter project city or location.';
+            isValid = false;
+        }
+
+        if (!requirement) {
+            errorSpans.requirement.textContent = 'Please provide details of your lighting requirement.';
+            isValid = false;
+        }
+
+        if (!isValid) return;
+
+        // Submission via Web3Forms
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting Enquiry...';
+
+        try {
+            var formData = new FormData(this);
+            // Ensure the enquirer's email is set as reply-to for auto-responses
+            formData.set('reply_to', email);
+            // Attempt to set notification recipient; configure Web3Forms dashboard to ensure delivery to this address
+            formData.set('to', 'light.kivasaglobaltech@gmail.com');
+            var response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            var result = await response.json();
+
+            if (result.success) {
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('formSuccess').style.display = 'block';
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submit', { event_category: 'conversion', project_type: projectType });
+                }
+            } else {
+                alert('Submission notice: ' + (result.message || 'Please reach us directly on WhatsApp or phone.'));
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Submit Technical Enquiry <i class="fas fa-paper-plane"></i>';
+            }
+        } catch (err) {
+            alert('A network connection error occurred. Please contact us directly at light.kivasaglobaltech@gmail.com or via WhatsApp.');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Submit Technical Enquiry <i class="fas fa-paper-plane"></i>';
+        }
+    });
+    </script>
 </body>
 </html>

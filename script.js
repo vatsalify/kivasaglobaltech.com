@@ -5,8 +5,9 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // ---- Navbar Scroll Effect ----
-    const navbar = document.getElementById('navbar');
+    var navbar = document.getElementById('navbar');
     function handleScroll() {
+        if (!navbar) return;
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
@@ -16,62 +17,15 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 
-    // ---- Mobile Nav Toggle ----
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function () {
-            navToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Close on link click
-        navMenu.querySelectorAll('.nav-link').forEach(function (link) {
-            link.addEventListener('click', function () {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Close on outside click
-        document.addEventListener('click', function (e) {
-            if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            }
-        });
-    }
-
-    // ---- Project Filters ----
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    // ---- Product & Project Filters ----
+    var filterButtons = document.querySelectorAll('.product-filters .filter-btn');
     filterButtons.forEach(function (btn) {
         btn.addEventListener('click', function () {
-            const filterGroup = btn.closest('.project-filters, .product-filters');
-            if (filterGroup) {
-                filterGroup.querySelectorAll('.filter-btn').forEach(function (b) {
-                    b.classList.remove('active');
-                });
-            }
-            btn.classList.add('active');
-
-            const filter = btn.getAttribute('data-filter');
-
-            // Handle project cards
-            var projectCards = document.querySelectorAll('.project-grid-card');
-            projectCards.forEach(function (card) {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
+            filterButtons.forEach(function (b) {
+                b.classList.remove('active');
             });
-
-            // Handle product cards
-            var productCards = document.querySelectorAll('.product-card');
-            if (productCards.length > 0) {
-                filterProducts();
-            }
+            btn.classList.add('active');
+            filterProducts();
         });
     });
 
@@ -85,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function filterProducts() {
         var searchInput = document.getElementById('productSearch');
-        var searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+        var searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
         var activeFilter = document.querySelector('.product-filters .filter-btn.active');
         var categoryFilter = activeFilter ? activeFilter.getAttribute('data-filter') : 'all';
-        var productCards = document.querySelectorAll('.product-card');
+        var productCards = document.querySelectorAll('.products-grid .product-card');
         var noProducts = document.getElementById('noProducts');
         var visibleCount = 0;
 
@@ -114,128 +68,152 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ---- Scroll Animations ----
-    var animateElements = document.querySelectorAll('.service-card, .project-card, .product-card, .value-card, .mv-card, .why-feature');
+    var animateElements = document.querySelectorAll('.service-card, .project-card, .product-card, .value-card, .mv-card, .why-feature, .stat-item');
     animateElements.forEach(function (el) {
         el.classList.add('animate-on-scroll');
     });
 
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
+            observer.observe(el);
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    } else {
+        document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
+            el.classList.add('visible');
+        });
+    }
 
-    document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
-        observer.observe(el);
-    });
+    // ---- Random Clean Stock Background Images ----
+    var stockImages = [
+        'decorative-lighting-stock-image-1.png',
+        'decorative-lighting-stock-image.png',
+        'decorative-poles-stock-image.png',
+        'facade-lighting-stock-image-2.png',
+        'facade-lighting-stock-image.png',
+        'home-lighting-stock-image-2.png',
+        'home-lighting-stock-image.png',
+        'hospitality-lighting-stock-image.png',
+        'industrial-lighting-stock-image.png',
+        'landscape-lighting-stock-image.png',
+        'landscape-light-stock-image.png',
+        'office-lighting-stock-image.png',
+        'pendant-light-stock-image.png',
+        'streetlight-stock-image.png',
+        'table-lamps-decorative-stock-image.png',
+        'wall-lamps-decorative-stock-image.png'
+    ];
 
-    // ---- Random Hero Background ----
-    const heroSection = document.querySelector('.hero-section');
-    if (heroSection) {
-        const stockImages = [
-            'Decorative Lighting stock image 1.png',
-            'Decorative Lighting stock image.png',
-            'Decorative poles stock image.png',
-            'facade lighting stock image 2.png',
-            'facade lighting stock image.png',
-            'Home Lighting Stock Image (2).png',
-            'Home lighting stock image.png',
-            'Hospitality lighitng stock image.png',
-            'Industrial Lighting stock image.png',
-            'Landscape Lighting stock image.png',
-            'landscpae light stock image.png',
-            'Office lighting stock image.png',
-            'Pendant light stock image.png',
-            'Streetlight stock image.png',
-            'Table lamps decorative stock image.png',
-            'Wall lamps decorative stock image.png'
-        ];
-        
-        const randomImage = stockImages[Math.floor(Math.random() * stockImages.length)];
-        // Encode only characters that break CSS url()
-        const safeName = randomImage
-            .replace(/\(/g, '%28')
-            .replace(/\)/g, '%29')
-            .replace(/'/g, '%27')
-            .replace(/ /g, '%20');
-        const imagePath = 'Resources/Stock%20Images%20for%20Background/' + safeName;
+    function applyRandomBackground(el) {
+        if (!el) return;
+        var randomImage = stockImages[Math.floor(Math.random() * stockImages.length)];
+        var imagePath = '/assets/images/' + randomImage;
+        el.style.backgroundImage = "linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.55)), url('" + imagePath + "')";
+        el.style.backgroundSize = 'cover';
+        el.style.backgroundPosition = 'center center';
+        el.style.backgroundRepeat = 'no-repeat';
+    }
 
-        // Overlay at 0.45 so image is clearly visible but text remains readable
-        heroSection.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('" + imagePath + "')";
-        heroSection.style.backgroundSize = 'cover';
-        heroSection.style.backgroundPosition = 'center center';
-        heroSection.style.backgroundRepeat = 'no-repeat';
+    var heroSection = document.querySelector('.hero-section');
+    if (heroSection) applyRandomBackground(heroSection);
+
+    var pageHeader = document.querySelector('.page-header');
+    if (pageHeader && !pageHeader.classList.contains('no-bg-random')) {
+        applyRandomBackground(pageHeader);
     }
 
     // ---- Smooth scroll for hash links ----
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
-            var target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            var targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                var target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
+
+    // ---- Analytics Click Tracking ----
+    document.querySelectorAll('.download-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'catalogue_download', { event_category: 'engagement', file_name: 'jaquar-lighting-catalogue-2026.pdf' });
+            }
+        });
+    });
+
+    document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'phone_click', { event_category: 'contact' });
             }
         });
     });
 });
 
-// ---- Product Modal ----
+// ---- Product Modal Functionality (Global) ----
 function openProductModal(button) {
     var card = button.closest('.product-card');
     if (!card) return;
 
     var modal = document.getElementById('productModal');
-    var title = card.querySelector('.product-info h3').textContent;
-    var desc = card.querySelector('.product-desc').textContent;
-    var category = card.querySelector('.product-badge').textContent;
+    if (!modal) return;
+
+    var title = card.querySelector('.product-info h3') ? card.querySelector('.product-info h3').textContent : '';
+    var desc = card.querySelector('.product-desc') ? card.querySelector('.product-desc').textContent : '';
+    var badge = card.querySelector('.product-badge') ? card.querySelector('.product-badge').textContent : '';
     var specsTable = card.querySelector('.product-full-specs table');
 
-    document.getElementById('modalTitle').textContent = title;
-    document.getElementById('modalDesc').textContent = desc;
-    document.getElementById('modalCategory').textContent = category;
+    var titleEl = document.getElementById('modalTitle');
+    var descEl = document.getElementById('modalDesc');
+    var badgeEl = document.getElementById('modalCategory');
+    var specsEl = document.getElementById('modalSpecs');
 
-    var modalSpecs = document.getElementById('modalSpecs');
-    if (specsTable) {
-        modalSpecs.innerHTML = specsTable.outerHTML;
+    if (titleEl) titleEl.textContent = title;
+    if (descEl) descEl.textContent = desc;
+    if (badgeEl) badgeEl.textContent = badge;
+
+    if (specsEl) {
+        if (specsTable) {
+            specsEl.innerHTML = '<div class="table-responsive">' + specsTable.outerHTML + '</div>';
+        } else {
+            specsEl.innerHTML = '<p>Detailed datasheet available on request.</p>';
+        }
     }
 
+    // Show modal and update ARIA
+    modal.style.display = 'flex';
     modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+
+    // Focus management: move focus to close button
+    var closeBtn = modal.querySelector('.modal-close');
+    if (closeBtn) closeBtn.focus();
 }
 
 function closeProductModal() {
     var modal = document.getElementById('productModal');
+    if (!modal) return;
     modal.classList.remove('active');
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
 }
 
-// Close modal on Escape
+// Global modal close handlers
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
         closeProductModal();
     }
 });
-
-// ---- Contact Form Handler ----
-function handleFormSubmit(e) {
-    e.preventDefault();
-
-    var form = document.getElementById('contactForm');
-    var success = document.getElementById('formSuccess');
-
-    // Basic validation
-    var name = document.getElementById('name').value.trim();
-    var phone = document.getElementById('phone').value.trim();
-    var email = document.getElementById('email').value.trim();
-    var requirement = document.getElementById('requirement').value.trim();
-
-    if (!name || !phone || !email || !requirement) {
-        return;
-    }
-
-    // Show success (placeholder - integrate with backend/email service)
-    form.style.display = 'none';
-    success.style.display = 'block';
-}
