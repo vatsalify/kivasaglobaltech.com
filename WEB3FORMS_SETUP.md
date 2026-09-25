@@ -1,13 +1,13 @@
 Web3Forms: Autoresponder, Notification Templates, and SMTP Setup
 
-This document contains ready-to-copy templates and step-by-step SMTP instructions to configure Web3Forms for `contact.html`.
+This document contains ready-to-copy templates and step-by-step SMTP instructions to configure Web3Forms for the enquiry forms on the home page (`index.html`) and `contact.html`.
 
-1) Quick checklist (already present in `contact.html`)
+1) Quick checklist (already present in both forms)
 - Form `action="https://api.web3forms.com/submit"` — present.
 - Hidden `access_key` — present.
-- Honeypot `_gotcha` — present.
-- Client script sets `reply_to` and `to` (configured to light.kivasaglobaltech@gmail.com).
-- Added hidden inputs: `form_id=project-enquiry`, `source=website-contact-form`, `redirect=/thank-you`.
+- Honeypot `botcheck` (Web3Forms' built-in spam trap) — present.
+- Client script (`assets/js/site.js`) sets `replyto` to the enquirer's email. Delivery goes to the inbox configured for this access key in the Web3Forms dashboard (light.kivasaglobaltech@gmail.com).
+- Hidden inputs: `subject`, `from_name`, and `redirect` (to /thank-you/, used only when JavaScript is off).
 
 2) Dashboard steps
 - Log into Web3Forms -> Forms -> Open form matching the `access_key`.
@@ -21,7 +21,7 @@ This document contains ready-to-copy templates and step-by-step SMTP instruction
   - Subject: "Kivasa Globaltech — We received your enquiry"
   - Body (plain or HTML): see template below.
 - Notification template (internal): include all fields, IP, user agent, and timestamp.
-- Anti-spam: keep `_gotcha` enabled; enable reCAPTCHA or built-in spam protection if available.
+- Anti-spam: keep `botcheck` enabled; enable reCAPTCHA or built-in spam protection if available.
 - Webhook (optional): add your webhook/CRM endpoint for server-side logging.
 
 3) Autoresponder template (copy into Web3Forms autoresponder)
