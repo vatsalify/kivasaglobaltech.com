@@ -73,7 +73,8 @@
       b.addEventListener("click", function () {
         buttons.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
         rows.forEach(function (r) {
-          r.hidden = b.dataset.f !== "all" && r.dataset.status !== b.dataset.f;
+          var f = b.dataset.f;
+          r.hidden = f !== "all" && (f.indexOf("s:") === 0 ? r.dataset.sector !== f.slice(2) : r.dataset.status !== f);
         });
       });
     });
