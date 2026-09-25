@@ -7,3 +7,6 @@
 !.dev.vars.example
 .env*
 !.env.example
+
+# Downloadable price lists published on the site (must stay under Cloudflare's 25 MB per-file limit)
+!assets/docs/*.pdf
