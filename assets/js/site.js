@@ -14,6 +14,58 @@
     });
   }
 
+  // Home hero: rotate through completed-project photos
+  var hero = document.querySelector(".hero-slides");
+  if (hero) {
+    var slides = hero.querySelectorAll(".hero-slide");
+    var dots = hero.querySelectorAll(".hero-dot");
+    var signs = hero.querySelectorAll(".hero-now .board-sign");
+    var nameEl = hero.querySelector(".hero-name");
+    var metaEl = hero.querySelector(".hero-meta");
+    var pauseBtn = hero.querySelector(".hero-pause");
+    var idx = 0, timer = null, paused = false, DELAY = 6000;
+
+    function load(img) {
+      if (img && img.dataset.src) { img.src = img.dataset.src; img.removeAttribute("data-src"); }
+    }
+    function show(n) {
+      var next = slides[n];
+      load(next);
+      var go = function () {
+        slides[idx].classList.remove("is-on");
+        // restart the zoom animation on the incoming slide
+        next.classList.remove("is-on"); void next.offsetWidth; next.classList.add("is-on");
+        idx = n;
+        dots.forEach(function (d, i) { d.setAttribute("aria-pressed", i === n ? "true" : "false"); });
+        signs.forEach(function (s) { s.hidden = s.dataset.for !== next.dataset.board; });
+        nameEl.textContent = next.dataset.name;
+        metaEl.textContent = next.dataset.scope + " · Commissioned " + next.dataset.year;
+        load(slides[(n + 1) % slides.length]);
+      };
+      if (next.complete && next.naturalWidth) go();
+      else next.addEventListener("load", go, { once: true });
+    }
+    function start() {
+      stop();
+      if (!paused && slides.length > 1) timer = setInterval(function () { show((idx + 1) % slides.length); }, DELAY);
+    }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    dots.forEach(function (d, i) {
+      d.addEventListener("click", function () { if (i !== idx) show(i); start(); });
+    });
+    if (pauseBtn) pauseBtn.addEventListener("click", function () {
+      paused = !paused;
+      pauseBtn.setAttribute("aria-pressed", paused ? "true" : "false");
+      pauseBtn.textContent = paused ? "Play" : "Pause";
+      paused ? stop() : start();
+    });
+    document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+
+    load(slides[1]);
+    start();
+  }
+
   // Project board filter
   document.querySelectorAll("[data-board]").forEach(function (board) {
     var buttons = board.querySelectorAll(".filters button");
