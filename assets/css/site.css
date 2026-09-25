@@ -236,6 +236,32 @@ p{margin:0}
 .pcard a{margin-top:auto;padding-top:6px;font:600 13.5px var(--body);color:var(--ink);text-underline-offset:3px}
 .empty{padding:40px;text-align:center;color:var(--ink-2);background:#fff;border:1px dashed var(--paper-rule);border-radius:6px}
 
+/* ---------- Sector ranges (services page) ---------- */
+.sector-list{display:grid;gap:18px}
+.sector-card{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr);background:var(--deck);border:1px solid var(--rule);border-radius:8px;overflow:hidden;scroll-margin-top:84px}
+.sc-img{position:relative;min-height:220px}
+.sc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sc-body{padding:clamp(20px,3vw,32px)}
+.sc-body h3{font-size:clamp(22px,2.4vw,28px);font-weight:750}
+.sc-where{margin-top:6px;font:500 12.5px var(--mono);letter-spacing:.06em;color:var(--gold-hi)}
+.sc-body .ticks{margin:18px 0 0}
+.sc-body .ticks li{font-size:15px;color:#D3DAE6}
+.sc-src{margin-top:18px;padding-top:14px;border-top:1px solid var(--rule);font-size:13px;color:var(--mist)}
+.sc-src a{color:var(--gold-hi);text-underline-offset:3px}
+
+/* ---------- Downloads ---------- */
+.downloads .sec-head{margin-bottom:28px}
+.dl-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.dl-card{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:center;padding:16px;background:var(--deck);border:1px solid var(--rule);border-radius:8px;text-decoration:none;transition:border-color .2s,background .2s}
+.alt .dl-card{background:var(--night)}
+.dl-card:hover{border-color:var(--gold)}
+.dl-card img{width:120px;height:auto;border-radius:3px;box-shadow:0 8px 24px rgba(0,0,0,.35);background:#fff}
+.dl-body{display:grid;gap:6px}
+.dl-body b{font:700 19px/1.2 var(--display);font-stretch:110%}
+.dl-body > span:not(.dl-meta):not(.dl-go){font-size:14px;color:var(--mist);line-height:1.5}
+.dl-meta{font:500 12px var(--mono);letter-spacing:.06em;color:var(--mist)}
+.dl-go{margin-top:6px;font:600 14.5px var(--body);color:var(--gold-hi)}
+
 /* ---------- Process ---------- */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;list-style:none;margin:0;padding:0}
 .steps li{position:relative;padding:26px 24px 0 0;border-top:2px solid var(--rule)}
@@ -350,6 +376,9 @@ p{margin:0}
   .work,.prods{grid-template-columns:1fr 1fr}
   .steps,.values{grid-template-columns:1fr 1fr;row-gap:36px}
   .footer .wrap{grid-template-columns:1fr 1fr}
+  .sector-card{grid-template-columns:1fr}
+  .sc-img{min-height:200px}
+  .dl-grid{grid-template-columns:1fr}
   .search{max-width:none;margin-left:0}
 }
 @media (min-width:981px){
@@ -366,6 +395,8 @@ p{margin:0}
   .direct div{grid-template-columns:1fr;gap:2px}
   .facts{grid-template-columns:1fr}
   .wa-float span{display:none}
+  .dl-card{grid-template-columns:84px 1fr;gap:14px}
+  .dl-card img{width:84px}
   .cat-bar{position:static}
   .hero{min-height:calc(100svh - 68px)}
   .hero-shade{background:linear-gradient(0deg,rgba(5,8,15,.95) 0%,rgba(5,8,15,.75) 55%,rgba(5,8,15,.35) 100%)}
