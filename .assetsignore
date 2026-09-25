@@ -1,0 +1,11 @@
+# Files that must not be published by Cloudflare (wrangler.jsonc serves this whole folder)
+.git
+.wrangler
+.dev.vars*
+.env*
+server
+*.md
+*.xlsx
+*.docx
+scratch_*.txt
+wrangler.jsonc

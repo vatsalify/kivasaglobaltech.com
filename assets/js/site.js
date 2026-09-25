@@ -1,7 +1,6 @@
 /* Kivasa Globaltech — site script */
 (function () {
   var WHATSAPP = "918200461631";
-  var EMAIL = "info@kivasaglobaltech.com";
 
   // Mobile menu
   var nav = document.querySelector(".nav");
@@ -133,29 +132,53 @@
     apply();
   }
 
-  // Enquiry form: sends the details to Kivasa on WhatsApp (email as fallback)
+  // Enquiry form: submitted to Web3Forms, which emails it to the Kivasa inbox.
+  // Without JavaScript the form still posts normally and Web3Forms redirects to /thank-you/.
   document.querySelectorAll("form.enquiry").forEach(function (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      if (!form.reportValidity()) return;
-      var d = new FormData(form);
-      var lines = ["New enquiry from kivasaglobaltech.com", ""];
-      [["name", "Name"], ["company", "Company"], ["phone", "Phone"], ["email", "Email"], ["type", "Project type"], ["requirement", "Requirement"]].forEach(function (f) {
+    var status = form.querySelector(".form-status");
+    var button = form.querySelector('button[type="submit"]');
+
+    function waLink() {
+      var d = new FormData(form), lines = ["Hello Kivasa, I'd like a quote."];
+      [["name", "Name"], ["company", "Company"], ["phone", "Phone"], ["project_type", "Project type"], ["city", "City"], ["requirement", "Requirement"]].forEach(function (f) {
         var v = (d.get(f[0]) || "").toString().trim();
         if (v) lines.push(f[1] + ": " + v);
       });
-      var text = lines.join("\n");
-      var wa = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(text);
-      var mail = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Enquiry from " + (d.get("name") || "website")) + "&body=" + encodeURIComponent(text);
-
-      var status = form.querySelector(".form-status");
-      status.innerHTML = "";
-      status.append("WhatsApp is opening with your details filled in. Press send to reach our team, and attach your BOQ or drawings there. ");
-      var a1 = document.createElement("a"); a1.href = wa; a1.target = "_blank"; a1.rel = "noopener"; a1.textContent = "Open WhatsApp again";
-      var a2 = document.createElement("a"); a2.href = mail; a2.textContent = "send by email instead";
-      status.append(a1, " or ", a2, ".");
+      return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(lines.join("\n"));
+    }
+    function say(kind, text, linkText, href) {
+      status.className = "form-status" + (kind === "error" ? " error" : "");
+      status.textContent = text + " ";
+      if (linkText) {
+        var a = document.createElement("a");
+        a.href = href; a.target = "_blank"; a.rel = "noopener"; a.textContent = linkText;
+        status.appendChild(a);
+      }
       status.hidden = false;
-      window.open(wa, "_blank", "noopener");
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      var data = new FormData(form);
+      if (data.get("botcheck")) return;
+      data.set("replyto", (data.get("email") || "").toString());
+      button.disabled = true;
+      var label = button.textContent;
+      button.textContent = "Sending…";
+
+      fetch(form.action, { method: "POST", body: data, headers: { Accept: "application/json" } })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (!res.success) throw new Error(res.message || "Submission failed");
+          var wa = waLink();
+          form.reset();
+          say("ok", "Thank you, we've received your enquiry and will reply within one business day. Have drawings or a BOQ?", "Send them on WhatsApp.", wa);
+        })
+        .catch(function () {
+          say("error", "Your enquiry couldn't be sent just now. Please try again, or", "send it to us on WhatsApp instead.", waLink());
+        })
+        .then(function () { button.disabled = false; button.textContent = label; });
     });
   });
 })();
