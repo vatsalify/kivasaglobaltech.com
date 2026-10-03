@@ -65,6 +65,59 @@
     start();
   }
 
+  // Project photo slideshows (projects page)
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll("[data-slides]").forEach(function (box) {
+    var imgs = box.querySelectorAll(".sl");
+    var dots = box.querySelectorAll(".sl-dot");
+    var count = box.querySelector(".sl-count");
+    var n = imgs.length, idx = 0, timer = null, visible = false, hold = false;
+    function load(i) {
+      var im = imgs[i];
+      if (im && im.dataset.src) { im.src = im.dataset.src; im.removeAttribute("data-src"); }
+    }
+    function show(i) {
+      i = (i + n) % n;
+      load(i);
+      imgs[idx].classList.remove("is-on");
+      imgs[i].classList.add("is-on");
+      idx = i;
+      dots.forEach(function (d, k) { d.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+      if (count) count.textContent = (i + 1) + " / " + n;
+      load((i + 1) % n);
+    }
+    function tick() {
+      clearInterval(timer); timer = null;
+      if (!reduceMotion && visible && !hold) timer = setInterval(function () { show(idx + 1); }, 4500);
+    }
+    box.querySelector(".sl-prev").addEventListener("click", function () { show(idx - 1); tick(); });
+    box.querySelector(".sl-next").addEventListener("click", function () { show(idx + 1); tick(); });
+    dots.forEach(function (d, k) { d.addEventListener("click", function () { show(k); tick(); }); });
+    box.addEventListener("mouseenter", function () { hold = true; tick(); });
+    box.addEventListener("mouseleave", function () { hold = false; tick(); });
+    box.addEventListener("focusin", function () { hold = true; tick(); });
+    box.addEventListener("focusout", function () { hold = false; tick(); });
+    box.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") { show(idx - 1); e.preventDefault(); }
+      if (e.key === "ArrowRight") { show(idx + 1); e.preventDefault(); }
+    });
+    var x0 = null;
+    box.addEventListener("pointerdown", function (e) { x0 = e.clientX; });
+    box.addEventListener("pointerup", function (e) {
+      if (x0 === null) return;
+      var dx = e.clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) { show(idx + (dx < 0 ? 1 : -1)); tick(); }
+    });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) {
+        visible = es[0].isIntersecting;
+        if (visible) load(1);
+        tick();
+      }, { threshold: 0.4 }).observe(box);
+    } else { visible = true; load(1); tick(); }
+    document.addEventListener("visibilitychange", function () { if (document.hidden) { clearInterval(timer); timer = null; } else tick(); });
+  });
+
   // Project board filter
   document.querySelectorAll("[data-board]").forEach(function (board) {
     var buttons = board.querySelectorAll(".filters button");
